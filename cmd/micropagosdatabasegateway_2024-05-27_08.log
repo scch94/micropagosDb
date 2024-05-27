@@ -1,0 +1,203 @@
+[2024-05-27 08:15:08.363] [not_specified] [config] [info] [] starting to get the config struct 
+[2024-05-27 08:15:08.363] [Gconfiguration] [] [info] [] starting gconfiguration Versión:%!(EXTRA string=1.0.0)
+[2024-05-27 08:15:08.364] [Gconfiguration] [] [info] [] ubication of the configurationfile C:\golang\proyectos\micropagosDb\cmd\configuration\config.json
+[2024-05-27 08:15:08.368] [Gconfiguration] [] [info] [] ending to get the configuration
+[2024-05-27 08:15:08.368] [Gconfiguration] [] [trace] [] this is the data that we have in the configuration {"serverPort":":2122","log_level":"trace","mysqlConnection":{"raven":{"connectionString":"root:root@tcp(127.0.0.1:1010)/raven","maxOpenConns":50,"maxIdleConns":2,"conMaxLifeTime":0},"weaver":{"connectionString":"root:root@tcp(127.0.0.1:1010)/weaver","maxOpenConns":50,"maxIdleConns":2,"conMaxLifeTime":1}},"myPostgresConnection":{"raven":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0},"weaver":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0}}}
+[2024-05-27 08:15:08.368] [micropagosdatabase] [main] [info] [] startig micropagos database module version : 1.0.0
+[2024-05-27 08:15:19.065] [micropagosdatabase] [database] [info] [] conected to the mysql message database
+[2024-05-27 08:15:19.269] [micropagosdatabase] [database] [info] [] conected to the mysql user database
+[2024-05-27 08:15:19.269] [micropagosdatabase] [server] [info] [] Starting server on address: :2122
+[2024-05-27 08:15:29.604] [micropagosdatabase] [middleware] [info] [b3cad2a4497b] New petition received
+[2024-05-27 08:15:29.604] [micropagosdatabase] [middleware] [trace] [b3cad2a4497b] url: /insertMessage, method: POST
+[2024-05-27 08:15:29.604] [micropagosdatabase] [handler] [error] [b3cad2a4497b] Route  not found: url: /insertMessage, method: POST
+[2024-05-27 08:15:29.604] [micropagosdatabase] [middleware] [info] [b3cad2a4497b] Request took 0s
+[2024-05-27 08:15:34.503] [micropagosdatabase] [middleware] [info] [6feff505fc16] New petition received
+[2024-05-27 08:15:34.504] [micropagosdatabase] [middleware] [trace] [6feff505fc16] url: /insertMessage, method: POST
+[2024-05-27 08:15:34.504] [micropagosdatabase] [handler] [error] [6feff505fc16] Route  not found: url: /insertMessage, method: POST
+[2024-05-27 08:15:34.504] [micropagosdatabase] [middleware] [info] [6feff505fc16] Request took 509µs
+[2024-05-27 08:15:35.579] [micropagosdatabase] [middleware] [info] [8eaa766b739a] New petition received
+[2024-05-27 08:15:35.579] [micropagosdatabase] [middleware] [trace] [8eaa766b739a] url: /insertMessage, method: POST
+[2024-05-27 08:15:35.580] [micropagosdatabase] [handler] [error] [8eaa766b739a] Route  not found: url: /insertMessage, method: POST
+[2024-05-27 08:15:35.580] [micropagosdatabase] [middleware] [info] [8eaa766b739a] Request took 508.8µs
+[2024-05-27 08:15:51.717] [micropagosdatabase] [middleware] [info] [312312] New petition received
+[2024-05-27 08:15:51.717] [micropagosdatabase] [middleware] [trace] [312312] url: /insertMessage/312312, method: POST
+[2024-05-27 08:15:51.717] [micropagosdatabase] [handler] [trace] [312312] this is the data that we recibed in the petition to insert the message {%!s(uint64=0) InboundSMS ñÑóÓúÚáÁéÉíÍüÜ 94951148   movistar 0001-01-01 00:00:00 +0000 UTC       %!s(uint64=0) %!s(uint64=0)   %!s(uint64=0) %!s(uint64=0) %!s(uint64=0) %!s(uint64=16) %!s(uint64=0) 0001-01-01 00:00:00 +0000 UTC %!s(uint64=0)    0001-01-01 00:00:00 +0000 UTC   %!s(uint64=0) }
+[2024-05-27 08:15:51.718] [micropagosdatabase] [handler] [info] [312312] starting to insert message
+[2024-05-27 08:15:51.718] [micropagosdatabase] [database] [trace] [312312] attempting to insert the message into the database
+[2024-05-27 08:15:51.718] [micropagosdatabase] [database] [trace] [312312] this is the query we will attempt to insert: INSERT INTO message (type, content, mobile_number, mobile_countryisocode, shortnumber, telco, created, routingtype, matchedpattern, serviceid, telcoid, sessionaction, sessionparameters_map, sessiontimeoutseconds, priority, clientid, url, accesstimeoutseconds, request_id, defaultaction_id, application_id, session_id, processed, millissincerequest, sessionapplicationname, sendafter, sendbefore, sent, status, accesstimeouthandlerqueuename, useunsupportedmobilesregistry, originname) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+[2024-05-27 08:15:52.136] [micropagosdatabase] [database] [info] [312312] Inserting the message into the database took: 418.4687ms
+[2024-05-27 08:15:52.136] [micropagosdatabase] [database] [info] [312312] Message inserted successfully. The message was saved with the id 19719473 
+[2024-05-27 08:15:52.136] [micropagosdatabase] [middleware] [info] [312312] Request took 419.5231ms
+[2024-05-27 08:34:49.158] [micropagosdatabase] [middleware] [info] [312312] New petition received
+[2024-05-27 08:34:49.159] [micropagosdatabase] [middleware] [trace] [312312] url: /filter/99111111/88277/312312, method: GET
+[2024-05-27 08:34:49.159] [micropagosdatabase] [handler] [info] [312312] starting to check if the shortnumber 88277 with the mobile 99111111 are filter
+[2024-05-27 08:34:49.159] [micropagosdatabase] [database] [trace] [312312] Checking if the combination of destination and origin mobile numbers is not filtered.
+[2024-05-27 08:34:49.159] [micropagosdatabase] [database] [trace] [312312] this is the QUERY: SELECT id, added, comment, mobile_countryisocode, mobile_number, shortnumber FROM filter WHERE mobile_number = ? AND shortnumber = ? AND userremoved IS NULL AND (direction IS NULL OR direction = 'OUT') and the params: mobile_number=99111111, shortnumber=88277
+[2024-05-27 08:34:49.582] [micropagosdatabase] [database] [info] [312312] the combination of destination and origin mobile numbers is not filter
+[2024-05-27 08:34:49.582] [micropagosdatabase] [database] [info] [312312] the query in the database tooks: 423.4895ms
+[2024-05-27 08:34:49.582] [micropagosdatabase] [database] [trace] [312312] and this is the information of the database: {          false}
+[2024-05-27 08:34:49.583] [micropagosdatabase] [middleware] [info] [312312] Request took 424.5051ms
+[2024-05-27 08:34:53.017] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:34:53.017] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-05-27 08:34:53.017] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-05-27 08:34:53.017] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-05-27 08:34:53.017] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-05-27 08:35:03.833] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 10.8154296s
+[2024-05-27 08:35:03.833] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-05-27 08:35:03.833] [micropagosdatabase] [middleware] [info] [1111] Request took 10.8159772s
+[2024-05-27 08:35:05.231] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:35:05.231] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-05-27 08:35:05.232] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-05-27 08:35:05.232] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-05-27 08:35:05.232] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-05-27 08:35:05.653] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 421.3832ms
+[2024-05-27 08:35:05.653] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-05-27 08:35:05.653] [micropagosdatabase] [middleware] [info] [1111] Request took 421.8887ms
+[2024-05-27 08:35:06.151] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:35:06.152] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-05-27 08:35:06.152] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-05-27 08:35:06.152] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-05-27 08:35:06.152] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-05-27 08:35:06.570] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 418.2404ms
+[2024-05-27 08:35:06.570] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-05-27 08:35:06.570] [micropagosdatabase] [middleware] [info] [1111] Request took 418.7466ms
+[2024-05-27 08:35:07.025] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:35:07.026] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-05-27 08:35:07.026] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-05-27 08:35:07.026] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-05-27 08:35:07.026] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-05-27 08:35:07.432] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 405.8587ms
+[2024-05-27 08:35:07.432] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-05-27 08:35:07.432] [micropagosdatabase] [middleware] [info] [1111] Request took 406.3654ms
+[2024-05-27 08:35:07.935] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:35:07.935] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-05-27 08:35:07.936] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-05-27 08:35:07.936] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-05-27 08:35:07.936] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-05-27 08:35:08.352] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 415.721ms
+[2024-05-27 08:35:08.353] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-05-27 08:35:08.353] [micropagosdatabase] [middleware] [info] [1111] Request took 417.2383ms
+[2024-05-27 08:35:08.776] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:35:08.776] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-05-27 08:35:08.776] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-05-27 08:35:08.776] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-05-27 08:35:08.776] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-05-27 08:35:09.193] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 417.3613ms
+[2024-05-27 08:35:09.193] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-05-27 08:35:09.193] [micropagosdatabase] [middleware] [info] [1111] Request took 417.8703ms
+[2024-05-27 08:35:09.773] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:35:09.774] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-05-27 08:35:09.774] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-05-27 08:35:09.774] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-05-27 08:35:09.774] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-05-27 08:35:10.238] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 464.2715ms
+[2024-05-27 08:35:10.238] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-05-27 08:35:10.238] [micropagosdatabase] [middleware] [info] [1111] Request took 464.7765ms
+[2024-05-27 08:35:10.823] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:35:10.823] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-05-27 08:35:10.824] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-05-27 08:35:10.824] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-05-27 08:35:10.824] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-05-27 08:35:11.230] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 406.0016ms
+[2024-05-27 08:35:11.230] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-05-27 08:35:11.230] [micropagosdatabase] [middleware] [info] [1111] Request took 406.5108ms
+[2024-05-27 08:35:11.847] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:35:11.847] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-05-27 08:35:11.847] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-05-27 08:35:11.847] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-05-27 08:35:11.847] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-05-27 08:35:12.270] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 422.9694ms
+[2024-05-27 08:35:12.270] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-05-27 08:35:12.270] [micropagosdatabase] [middleware] [info] [1111] Request took 423.5023ms
+[2024-05-27 08:35:12.949] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:35:12.950] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-05-27 08:35:12.950] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-05-27 08:35:12.950] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-05-27 08:35:12.950] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-05-27 08:35:13.365] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 415.6398ms
+[2024-05-27 08:35:13.365] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-05-27 08:35:13.365] [micropagosdatabase] [middleware] [info] [1111] Request took 416.1485ms
+[2024-05-27 08:35:13.832] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:35:13.833] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-05-27 08:35:13.833] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-05-27 08:35:13.833] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-05-27 08:35:13.833] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-05-27 08:35:14.249] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 416.3846ms
+[2024-05-27 08:35:14.249] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-05-27 08:35:14.250] [micropagosdatabase] [middleware] [info] [1111] Request took 417.4013ms
+[2024-05-27 08:35:14.744] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:35:14.744] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-05-27 08:35:14.744] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-05-27 08:35:14.744] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-05-27 08:35:14.744] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-05-27 08:35:15.165] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 421.02ms
+[2024-05-27 08:35:15.165] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-05-27 08:35:15.165] [micropagosdatabase] [middleware] [info] [1111] Request took 421.5267ms
+[2024-05-27 08:35:19.785] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:35:19.785] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerasasare/1111, method: GET
+[2024-05-27 08:35:19.785] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerasasare
+[2024-05-27 08:35:19.785] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerasasare
+[2024-05-27 08:35:19.785] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerasasare,
+[2024-05-27 08:35:20.200] [micropagosdatabase] [database] [info] [1111] didnt find domain for the user eaguerasasare
+[2024-05-27 08:35:20.201] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 415.3582ms
+[2024-05-27 08:35:20.201] [micropagosdatabase] [database] [info] [1111] and this is the domain: 
+[2024-05-27 08:35:20.201] [micropagosdatabase] [middleware] [info] [1111] Request took 415.8667ms
+[2024-05-27 08:35:23.582] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:35:23.582] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eagudasdasdaserasasare/1111, method: GET
+[2024-05-27 08:35:23.582] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eagudasdasdaserasasare
+[2024-05-27 08:35:23.582] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eagudasdasdaserasasare
+[2024-05-27 08:35:23.582] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eagudasdasdaserasasare,
+[2024-05-27 08:35:24.007] [micropagosdatabase] [database] [info] [1111] didnt find domain for the user eagudasdasdaserasasare
+[2024-05-27 08:35:24.007] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 424.2947ms
+[2024-05-27 08:35:24.007] [micropagosdatabase] [database] [info] [1111] and this is the domain: 
+[2024-05-27 08:35:24.007] [micropagosdatabase] [middleware] [info] [1111] Request took 425.3039ms
+[2024-05-27 08:35:24.929] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:35:24.929] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eagudasdasdaserasasare/1111, method: GET
+[2024-05-27 08:35:24.929] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eagudasdasdaserasasare
+[2024-05-27 08:35:24.929] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eagudasdasdaserasasare
+[2024-05-27 08:35:24.929] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eagudasdasdaserasasare,
+[2024-05-27 08:35:25.345] [micropagosdatabase] [database] [info] [1111] didnt find domain for the user eagudasdasdaserasasare
+[2024-05-27 08:35:25.345] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 415.7951ms
+[2024-05-27 08:35:25.345] [micropagosdatabase] [database] [info] [1111] and this is the domain: 
+[2024-05-27 08:35:25.346] [micropagosdatabase] [middleware] [info] [1111] Request took 416.8103ms
+[2024-05-27 08:35:26.337] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:35:26.337] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eagudasdasdaserasasare/1111, method: GET
+[2024-05-27 08:35:26.338] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eagudasdasdaserasasare
+[2024-05-27 08:35:26.338] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eagudasdasdaserasasare
+[2024-05-27 08:35:26.338] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eagudasdasdaserasasare,
+[2024-05-27 08:35:26.746] [micropagosdatabase] [database] [info] [1111] didnt find domain for the user eagudasdasdaserasasare
+[2024-05-27 08:35:26.746] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 408.4555ms
+[2024-05-27 08:35:26.746] [micropagosdatabase] [database] [info] [1111] and this is the domain: 
+[2024-05-27 08:35:26.747] [micropagosdatabase] [middleware] [info] [1111] Request took 409.4709ms
+[2024-05-27 08:35:38.107] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:35:38.107] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-05-27 08:35:38.108] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-05-27 08:35:38.108] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-05-27 08:35:38.108] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-05-27 08:35:38.529] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 421.253ms
+[2024-05-27 08:35:38.529] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-05-27 08:35:38.529] [micropagosdatabase] [middleware] [info] [1111] Request took 421.7585ms
+[2024-05-27 08:35:39.280] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:35:39.280] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-05-27 08:35:39.280] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-05-27 08:35:39.280] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-05-27 08:35:39.280] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-05-27 08:35:39.699] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 418.4355ms
+[2024-05-27 08:35:39.699] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-05-27 08:35:39.699] [micropagosdatabase] [middleware] [info] [1111] Request took 418.9432ms
+[2024-05-27 08:36:38.140] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:36:38.140] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-05-27 08:36:38.141] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-05-27 08:36:38.141] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-05-27 08:36:38.141] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-05-27 08:36:38.552] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 411.2853ms
+[2024-05-27 08:36:38.552] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-05-27 08:36:38.552] [micropagosdatabase] [middleware] [info] [1111] Request took 411.8136ms
+[2024-05-27 08:36:39.416] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-05-27 08:36:39.416] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-05-27 08:36:39.416] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-05-27 08:36:39.416] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-05-27 08:36:39.416] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-05-27 08:36:39.817] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 400.8915ms
+[2024-05-27 08:36:39.817] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-05-27 08:36:39.817] [micropagosdatabase] [middleware] [info] [1111] Request took 401.396ms

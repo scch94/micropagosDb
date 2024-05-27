@@ -1,0 +1,33 @@
+{
+    "serverPort":":2122",
+    "log_level":"trace",
+
+    "mysqlConnection":{
+        "raven":{
+            "connectionString":"root:root@tcp(127.0.0.1:1010)/raven",
+            "maxOpenConns":50,
+            "maxIdleConns":2,
+            "conMaxLifeTime":0
+        },
+        "weaver":{
+            "connectionString":"root:root@tcp(127.0.0.1:1010)/weaver",
+            "maxOpenConns":50,
+            "maxIdleConns":2,
+            "conMaxLifeTime":1
+        }
+    },
+    "myPostgresConnection":{
+        "raven":{
+            "connectionString":"",
+            "maxOpenConns":0,
+            "maxIdleConns":0,
+            "conMaxLifeTime":0
+        },
+        "weaver":{
+            "connectionString":"",
+            "maxOpenConns":0,
+            "maxIdleConns":0,
+            "conMaxLifeTime":0
+        }
+    }
+}
