@@ -27,7 +27,9 @@ func InsertMessage(m *request.InsertMessageModel, ctx context.Context) error {
 	ins_log.Tracef(ctx, "attempting to insert the message into the database")
 	ins_log.Tracef(ctx, "this is the query we will attempt to insert: %s", mySQLInsertMessage)
 
-	result, err := DBmessage.Exec(mySQLInsertMessage,
+	//realizamos la consula
+	db := GetDBMessage()
+	result, err := db.Exec(mySQLInsertMessage,
 		(m.Type),
 		(m.Content),
 		StringToNull(m.MobileNumber),

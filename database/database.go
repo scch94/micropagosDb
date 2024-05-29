@@ -29,15 +29,18 @@ func NewMysqlUserDb(ctx context.Context) {
 		var err error
 		DBusers, err = sql.Open("mysql", config.Config.MySQLConnection.Weaver.ConnectionString)
 		if err != nil {
-			ins_log.Fatalf(ctx, "cant open myssql database with string connection :%s , with error :%s", config.Config.MySQLConnection.Raven.ConnectionString, err)
+			ins_log.Fatalf(ctx, "cant open myssql database with string connection :%s , with error :%s", config.Config.MySQLConnection.Weaver.ConnectionString, err)
 		}
-		if err = DBmessage.Ping(); err != nil {
+
+		DBusers.SetMaxOpenConns(config.Config.MySQLConnection.Weaver.MaxOpenConns)
+		DBusers.SetMaxIdleConns(config.Config.MySQLConnection.Weaver.MaxIdleConns)
+		//DBusers.SetConnMaxLifetime(time.Duration(config.Config.MySQLConnection.Weaver.ConnMaxLifeTime) * time.Second)
+
+		if err = DBusers.Ping(); err != nil {
 			ins_log.Fatalf(ctx, "cant do ping to the database error :%s", err)
 		}
 		ins_log.Info(ctx, "conected to the mysql user database")
-		// DBusers.SetMaxOpenConns(config.Config.MySQLConnection.Weaver.MaxOpenConns)
-		// DBusers.SetMaxIdleConns(config.Config.MySQLConnection.Weaver.MaxIdleConns)
-		// DBusers.SetConnMaxLifetime(time.Duration(config.Config.MySQLConnection.Weaver.ConnMaxLifeTime) * time.Millisecond)
+
 	})
 }
 
@@ -49,15 +52,28 @@ func NewMysqlMessageDb(ctx context.Context) {
 		if err != nil {
 			ins_log.Fatalf(ctx, "cant open myssql database with string connection :%s , with error :%s", config.Config.MySQLConnection.Raven.ConnectionString, err)
 		}
+
+		DBmessage.SetMaxOpenConns(config.Config.MySQLConnection.Raven.MaxOpenConns)
+		DBmessage.SetMaxIdleConns(config.Config.MySQLConnection.Raven.MaxIdleConns)
+		//DBmessage.SetConnMaxLifetime(time.Duration(config.Config.MySQLConnection.Raven.ConnMaxLifeTime) * time.Second)
+
 		if err = DBmessage.Ping(); err != nil {
 			ins_log.Fatalf(ctx, "cant do ping to the database error :%s", err)
 		}
 		ins_log.Info(ctx, "conected to the mysql message database")
-		// DBmessage.SetMaxOpenConns(config.Config.MySQLConnection.Raven.MaxOpenConns)
-		// DBmessage.SetMaxIdleConns(config.Config.MySQLConnection.Raven.MaxIdleConns)
-		// DBmessage.SetConnMaxLifetime(time.Duration(config.Config.MySQLConnection.Raven.ConnMaxLifeTime) * time.Millisecond)
+
 	})
 }
+
+func GetDBUsers() *sql.DB {
+	return DBusers
+}
+
+// GetDBMessage returns the MySQL connection pool for message database
+func GetDBMessage() *sql.DB {
+	return DBmessage
+}
+
 func StringToNull(s string) sql.NullString {
 	if s == "" {
 		return sql.NullString{String: "", Valid: false}

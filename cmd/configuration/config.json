@@ -1,33 +1,32 @@
 {
-    "serverPort":":2122",
-    "log_level":"trace",
-
-    "mysqlConnection":{
-        "raven":{
-            "connectionString":"root:root@tcp(127.0.0.1:1010)/raven",
-            "maxOpenConns":200,
-            "maxIdleConns":20,
-            "conMaxLifeTime":1800
+    "serverPort": ":2122",
+    "log_level": "trace",
+    "mysqlConnection": {
+        "raven": {
+            "connectionString": "raven:micropagos@tcp(192.168.27.38:3306)/raven",
+            "maxOpenConns": 200,
+            "maxIdleConns": 20,
+            "conMaxLifeTime": 1800
         },
-        "weaver":{
-            "connectionString":"root:root@tcp(127.0.0.1:1010)/weaver",
-            "maxOpenConns":200,
-            "maxIdleConns":20,
-            "conMaxLifeTime":1800
+        "weaver": {
+            "connectionString": "weaver:micropagos@tcp(192.168.27.38:3306)/weaver",
+            "maxOpenConns": 200,
+            "maxIdleConns": 20,
+            "conMaxLifeTime": 1800
         }
     },
-    "myPostgresConnection":{
-        "raven":{
-            "connectionString":"",
-            "maxOpenConns":0,
-            "maxIdleConns":0,
-            "conMaxLifeTime":0
+    "myPostgresConnection": {
+        "raven": {
+            "connectionString": "",
+            "maxOpenConns": 0,
+            "maxIdleConns": 0,
+            "conMaxLifeTime": 0
         },
-        "weaver":{
-            "connectionString":"",
-            "maxOpenConns":0,
-            "maxIdleConns":0,
-            "conMaxLifeTime":0
+        "weaver": {
+            "connectionString": "",
+            "maxOpenConns": 0,
+            "maxIdleConns": 0,
+            "conMaxLifeTime": 0
         }
     }
 }

@@ -25,9 +25,27 @@ func GetUserDomain(r request.GetUserDomain, ctx context.Context) (*modeldb.UserD
 	ins_log.Tracef(ctx, "starting to get the domain for the user :%s", r.UserName)
 	startTime := time.Now()
 
-	//realizamos la consula
 	ins_log.Tracef(ctx, "this is the QUERY: %s and the params: Username=%s,", mySQLGetDomain, r.UserName)
-	err := DBusers.QueryRow(mySQLGetDomain, r.UserName).Scan(&domainModel.Domainname, &domainModel.Username, &domainModel.Password)
+
+	var err error
+	//realizamos la consula
+	for i := 0; i < 3; i++ {
+
+		queryCtx, cancel := context.WithTimeout(ctx, 350*time.Millisecond)
+		defer cancel()
+
+		// Realizar la consulta
+		db := GetDBUsers()
+		err = db.QueryRowContext(queryCtx, mySQLGetDomain, r.UserName).Scan(&domainModel.Domainname, &domainModel.Username, &domainModel.Password)
+
+		if err == nil {
+			// Consulta exitosa, salir del bucle
+			break
+		}
+
+		// Si hay un error, registrar el intento
+		ins_log.Tracef(ctx, "getUserDomain error on attempt %d: %v", i+1, err)
+	}
 
 	switch {
 	case err == sql.ErrNoRows:
@@ -36,7 +54,7 @@ func GetUserDomain(r request.GetUserDomain, ctx context.Context) (*modeldb.UserD
 		domainModel.Result = err.Error()
 		err = nil
 	case err != nil:
-		ins_log.Fatalf(ctx, "query error %v", err)
+		ins_log.Errorf(ctx, "query error %v", err)
 	default:
 		domainModel.Result = "the domain name is: " + domainModel.Domainname
 	}

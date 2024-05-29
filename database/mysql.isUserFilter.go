@@ -33,15 +33,33 @@ func IsUserFilter(r request.IsUserFilter, ctx context.Context) (*modeldb.IsUserF
 
 	ins_log.Tracef(ctx, "this is the QUERY: %s and the params: mobile_number=%s, shortnumber=%s", mySQLIsFilter, r.Mobile, r.ShortNumber)
 
-	// Ejecutamos la consulta directamente
-	err := DBmessage.QueryRow(mySQLIsFilter, r.Mobile, r.ShortNumber).Scan(
-		&filterModel.Id,
-		&filterModel.Added,
-		&filterModel.Comment,
-		&filterModel.MobileCountryisocode,
-		&filterModel.MobileNumber,
-		&filterModel.ShortNumber,
-	)
+	var err error
+	//realizamos la consula
+	for i := 0; i < 5; i++ {
+
+		queryCtx, cancel := context.WithTimeout(ctx, 350*time.Millisecond)
+		defer cancel()
+
+		//realizamos la consula
+		db := GetDBMessage()
+		err = db.QueryRowContext(queryCtx, mySQLIsFilter, r.Mobile, r.ShortNumber).Scan(
+			&filterModel.Id,
+			&filterModel.Added,
+			&filterModel.Comment,
+			&filterModel.MobileCountryisocode,
+			&filterModel.MobileNumber,
+			&filterModel.ShortNumber,
+		)
+
+		if err == nil || err == sql.ErrNoRows {
+			// Consulta exitosa, salir del bucle
+			break
+		}
+
+		// Si hay un error, registrar el intento
+		ins_log.Tracef(ctx, "getUserDomain error on attempt %d: %v", i+1, err)
+
+	}
 
 	//controlamos los errores, si no hay mas filas no es un error ! es lo que siempre esperamos
 	switch {
@@ -51,7 +69,7 @@ func IsUserFilter(r request.IsUserFilter, ctx context.Context) (*modeldb.IsUserF
 		filterModel.Comment = ""
 		err = nil
 	case err != nil:
-		ins_log.Fatalf(ctx, "query error %v", err)
+		ins_log.Errorf(ctx, "query error %v", err)
 	default:
 		ins_log.Infof(ctx, "the combination of destination and origin mobile numbers is filter")
 		filterModel.Result = true
