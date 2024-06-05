@@ -6,6 +6,7 @@ import (
 	"time"
 
 	"github.com/scch94/ins_log"
+	"github.com/scch94/micropagosDb/config"
 	modeldb "github.com/scch94/micropagosDb/models/db"
 	"github.com/scch94/micropagosDb/models/request"
 )
@@ -35,9 +36,9 @@ func IsUserFilter(r request.IsUserFilter, ctx context.Context) (*modeldb.IsUserF
 
 	var err error
 	//realizamos la consula
-	for i := 0; i < 5; i++ {
+	for i := 0; i < config.Config.QueryRetryCount; i++ {
 
-		queryCtx, cancel := context.WithTimeout(ctx, 350*time.Millisecond)
+		queryCtx, cancel := context.WithTimeout(ctx, time.Duration(config.Config.DbQueryTimeout)*time.Millisecond)
 		defer cancel()
 
 		//realizamos la consula

@@ -4,7 +4,7 @@ import (
 	"context"
 	"io"
 	"os"
-	"strings"
+	"path/filepath"
 	"time"
 
 	"github.com/scch94/ins_log"
@@ -14,40 +14,25 @@ import (
 )
 
 func main() {
+
 	// Creamos el contexto para esta ejecución
 	ctx := context.Background()
 
-	// Obtener la fecha actual utilizada para el nombre del archivo a escribir
-	today := time.Now().Format("2006-01-02 15")
-
-	// Reemplazar los caracteres no permitidos en el nombre del archivo
-	replacer := strings.NewReplacer(" ", "_")
-	today = replacer.Replace(today)
-
-	// Construir el nombre del archivo de log
-	logFileName := "micropagosdatabasegateway_" + today + ".log"
-	file, err := os.OpenFile(logFileName, os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0644)
+	logFileName, err := initializeLogger()
 	if err != nil {
 		panic(err)
 	}
-	defer file.Close()
+	defer logFileName.Close()
 
-	// Creamos un escritor que escriba tanto en el archivo como en la consola
-	multiWriter := io.MultiWriter(os.Stdout, file)
-	ins_log.StartLoggerWithWriter(multiWriter)
-
-	//levantamos la config
-	err = config.Upconfig(ctx)
-	if err != nil {
-		ins_log.Errorf(ctx, "error when we try to get the configuration err: %v", err)
+	// Load configuration
+	if err := config.Upconfig(ctx); err != nil {
+		ins_log.Errorf(ctx, "error loading configuration: %v", err)
 		return
 	}
 
 	// Inicializamos el logger
 	ins_log.SetService("micropagosdatabase")
 	ins_log.SetLevel(config.Config.LogLevel)
-
-	// Agregamos el valor "packageName" al contexto
 	ctx = ins_log.SetPackageNameInContext(ctx, "main")
 	ins_log.Infof(ctx, "startig micropagos database module version : %+v", version())
 
@@ -55,10 +40,33 @@ func main() {
 	database.InitDb(ctx)
 
 	//inicalisamos el servidor
-	err = server.StartServer(ctx)
-	if err != nil {
-		ins_log.Errorf(ctx, "error al tratarde iniciar el servidor : %s", err.Error())
+	if err := server.StartServer(ctx); err != nil {
+		ins_log.Errorf(ctx, "error starting server: %s", err.Error())
 	}
+}
+
+func initializeLogger() (*os.File, error) {
+	logDir := "../log"
+
+	// Create the log directory if it doesn't exist
+	if err := os.MkdirAll(logDir, 0755); err != nil {
+		return nil, err
+	}
+
+	//Definimos el nombre del archivo
+	today := time.Now().Format("2006-01-02_15")
+	logFileName := filepath.Join(logDir, "micropagosdatabasegateway_"+today+".log")
+
+	//abrimos el archivo del log
+	file, err := os.OpenFile(logFileName, os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0644)
+	if err != nil {
+		return nil, err
+	}
+
+	//configuramos para abrir el log file y la consola
+	multiWriter := io.MultiWriter(os.Stdout, file)
+	ins_log.StartLoggerWithWriter(multiWriter)
+	return file, nil
 }
 
 func version() string {

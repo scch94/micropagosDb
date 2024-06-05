@@ -35,7 +35,7 @@ func NewMysqlUserDb(ctx context.Context) {
 		DBusers.SetMaxOpenConns(config.Config.MySQLConnection.Weaver.MaxOpenConns)
 		DBusers.SetMaxIdleConns(config.Config.MySQLConnection.Weaver.MaxIdleConns)
 		DBusers.SetConnMaxLifetime(time.Duration(config.Config.MySQLConnection.Weaver.ConnMaxLifeTime) * time.Second)
-		DBmessage.SetConnMaxIdleTime(15 * time.Minute)
+		DBmessage.SetConnMaxIdleTime(time.Duration(config.Config.MySQLConnection.Weaver.ConnMaxIdleTime) * time.Second)
 
 		if err = DBusers.Ping(); err != nil {
 			ins_log.Fatalf(ctx, "cant do ping to the database error :%s", err)
@@ -57,7 +57,7 @@ func NewMysqlMessageDb(ctx context.Context) {
 		DBmessage.SetMaxOpenConns(config.Config.MySQLConnection.Raven.MaxOpenConns)
 		DBmessage.SetMaxIdleConns(config.Config.MySQLConnection.Raven.MaxIdleConns)
 		DBmessage.SetConnMaxLifetime(time.Duration(config.Config.MySQLConnection.Raven.ConnMaxLifeTime) * time.Second)
-		DBmessage.SetConnMaxIdleTime(15 * time.Minute)
+		DBmessage.SetConnMaxIdleTime(time.Duration(config.Config.MySQLConnection.Raven.ConnMaxIdleTime) * time.Minute)
 
 		if err = DBmessage.Ping(); err != nil {
 			ins_log.Fatalf(ctx, "cant do ping to the database error :%s", err)
@@ -67,6 +67,7 @@ func NewMysqlMessageDb(ctx context.Context) {
 	})
 }
 
+// GetDBusers returns the MySQL connection pool for message database
 func GetDBUsers() *sql.DB {
 	return DBusers
 }

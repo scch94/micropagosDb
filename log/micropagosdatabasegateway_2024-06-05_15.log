@@ -1,0 +1,163 @@
+[2024-06-05 15:05:54.538] [not_specified] [config] [info] [] starting to get the config struct 
+[2024-06-05 15:05:54.539] [Gconfiguration] [] [info] [] starting gconfiguration Versión:%!(EXTRA string=1.0.0)
+[2024-06-05 15:05:54.539] [Gconfiguration] [] [info] [] ubication of the configurationfile C:\golang\proyectos\micropagosDb\cmd\configuration\config.json
+[2024-06-05 15:05:54.543] [Gconfiguration] [] [info] [] ending to get the configuration
+[2024-06-05 15:05:54.543] [Gconfiguration] [] [trace] [] this is the data that we have in the configuration {"serverPort":":2122","log_level":"trace","queryRetryCount":3,"dbQueryTimeout":350,"mysqlConnection":{"raven":{"connectionString":"root:root@tcp(127.0.0.1:1010)/raven","maxOpenConns":200,"maxIdleConns":20,"conMaxLifeTime":1800,"conMaxIdleTime":0},"weaver":{"connectionString":"root:root@tcp(127.0.0.1:1010)/weaver","maxOpenConns":200,"maxIdleConns":20,"conMaxLifeTime":1800,"conMaxIdleTime":0}},"myPostgresConnection":{"raven":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0},"weaver":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0}}}
+[2024-06-05 15:05:54.544] [micropagosdatabase] [main] [info] [] startig micropagos database module version : 1.0.0
+[2024-06-05 15:06:05.242] [micropagosdatabase] [database] [info] [] conected to the mysql message database
+[2024-06-05 15:06:15.889] [micropagosdatabase] [database] [info] [] conected to the mysql user database
+[2024-06-05 15:06:15.889] [micropagosdatabase] [server] [info] [] Starting server on address: :2122
+[2024-06-05 15:16:10.865] [micropagosdatabase] [middleware] [info] [a74dfa08161b] New petition received
+[2024-06-05 15:16:10.866] [micropagosdatabase] [middleware] [trace] [a74dfa08161b] url: /masks/a74dfa08161b, method: GET
+[2024-06-05 15:16:10.866] [micropagosdatabase] [handler] [info] [a74dfa08161b] starting to get the maskpatterns
+[2024-06-05 15:16:10.866] [micropagosdatabase] [database] [trace] [a74dfa08161b] starting to get the mask patters
+[2024-06-05 15:16:10.866] [micropagosdatabase] [database] [trace] [a74dfa08161b] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:16:11.086] [micropagosdatabase] [database] [info] [a74dfa08161b] the query in the database tooks: 219.4072ms
+[2024-06-05 15:16:11.087] [micropagosdatabase] [middleware] [info] [a74dfa08161b] Request took 221.2627ms
+[2024-06-05 15:17:10.830] [micropagosdatabase] [middleware] [info] [57c037a75699] New petition received
+[2024-06-05 15:17:10.830] [micropagosdatabase] [middleware] [trace] [57c037a75699] url: /masks/57c037a75699, method: GET
+[2024-06-05 15:17:10.830] [micropagosdatabase] [handler] [info] [57c037a75699] starting to get the maskpatterns
+[2024-06-05 15:17:10.830] [micropagosdatabase] [database] [trace] [57c037a75699] starting to get the mask patters
+[2024-06-05 15:17:10.831] [micropagosdatabase] [database] [trace] [57c037a75699] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:17:11.041] [micropagosdatabase] [database] [info] [57c037a75699] the query in the database tooks: 210.8439ms
+[2024-06-05 15:17:11.042] [micropagosdatabase] [middleware] [info] [57c037a75699] Request took 211.7156ms
+[2024-06-05 15:18:10.839] [micropagosdatabase] [middleware] [info] [9c1ad61f429f] New petition received
+[2024-06-05 15:18:10.839] [micropagosdatabase] [middleware] [trace] [9c1ad61f429f] url: /masks/9c1ad61f429f, method: GET
+[2024-06-05 15:18:10.839] [micropagosdatabase] [handler] [info] [9c1ad61f429f] starting to get the maskpatterns
+[2024-06-05 15:18:10.840] [micropagosdatabase] [database] [trace] [9c1ad61f429f] starting to get the mask patters
+[2024-06-05 15:18:10.840] [micropagosdatabase] [database] [trace] [9c1ad61f429f] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:18:11.123] [micropagosdatabase] [database] [info] [9c1ad61f429f] the query in the database tooks: 282.9015ms
+[2024-06-05 15:18:11.124] [micropagosdatabase] [middleware] [info] [9c1ad61f429f] Request took 284.108ms
+[2024-06-05 15:19:10.846] [micropagosdatabase] [middleware] [info] [9814804d81c4] New petition received
+[2024-06-05 15:19:10.847] [micropagosdatabase] [middleware] [trace] [9814804d81c4] url: /masks/9814804d81c4, method: GET
+[2024-06-05 15:19:10.847] [micropagosdatabase] [handler] [info] [9814804d81c4] starting to get the maskpatterns
+[2024-06-05 15:19:10.847] [micropagosdatabase] [database] [trace] [9814804d81c4] starting to get the mask patters
+[2024-06-05 15:19:10.847] [micropagosdatabase] [database] [trace] [9814804d81c4] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:19:11.054] [micropagosdatabase] [database] [info] [9814804d81c4] the query in the database tooks: 207.0824ms
+[2024-06-05 15:19:11.055] [micropagosdatabase] [middleware] [info] [9814804d81c4] Request took 209.1414ms
+[2024-06-05 15:20:10.848] [micropagosdatabase] [middleware] [info] [3eb8b7524bd1] New petition received
+[2024-06-05 15:20:10.848] [micropagosdatabase] [middleware] [trace] [3eb8b7524bd1] url: /masks/3eb8b7524bd1, method: GET
+[2024-06-05 15:20:10.848] [micropagosdatabase] [handler] [info] [3eb8b7524bd1] starting to get the maskpatterns
+[2024-06-05 15:20:10.849] [micropagosdatabase] [database] [trace] [3eb8b7524bd1] starting to get the mask patters
+[2024-06-05 15:20:10.849] [micropagosdatabase] [database] [trace] [3eb8b7524bd1] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:20:11.122] [micropagosdatabase] [database] [info] [3eb8b7524bd1] the query in the database tooks: 273.0868ms
+[2024-06-05 15:20:11.122] [micropagosdatabase] [middleware] [info] [3eb8b7524bd1] Request took 273.6637ms
+[2024-06-05 15:21:10.844] [micropagosdatabase] [middleware] [info] [101570bb7931] New petition received
+[2024-06-05 15:21:10.844] [micropagosdatabase] [middleware] [trace] [101570bb7931] url: /masks/101570bb7931, method: GET
+[2024-06-05 15:21:10.844] [micropagosdatabase] [handler] [info] [101570bb7931] starting to get the maskpatterns
+[2024-06-05 15:21:10.844] [micropagosdatabase] [database] [trace] [101570bb7931] starting to get the mask patters
+[2024-06-05 15:21:10.844] [micropagosdatabase] [database] [trace] [101570bb7931] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:21:11.059] [micropagosdatabase] [database] [info] [101570bb7931] the query in the database tooks: 214.596ms
+[2024-06-05 15:21:11.060] [micropagosdatabase] [middleware] [info] [101570bb7931] Request took 216.0529ms
+[2024-06-05 15:22:10.830] [micropagosdatabase] [middleware] [info] [27f51a38697a] New petition received
+[2024-06-05 15:22:10.830] [micropagosdatabase] [middleware] [trace] [27f51a38697a] url: /masks/27f51a38697a, method: GET
+[2024-06-05 15:22:10.830] [micropagosdatabase] [handler] [info] [27f51a38697a] starting to get the maskpatterns
+[2024-06-05 15:22:10.830] [micropagosdatabase] [database] [trace] [27f51a38697a] starting to get the mask patters
+[2024-06-05 15:22:10.830] [micropagosdatabase] [database] [trace] [27f51a38697a] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:22:11.108] [micropagosdatabase] [database] [info] [27f51a38697a] the query in the database tooks: 277.3828ms
+[2024-06-05 15:22:11.108] [micropagosdatabase] [middleware] [info] [27f51a38697a] Request took 277.7787ms
+[2024-06-05 15:23:10.834] [micropagosdatabase] [middleware] [info] [b3dff4f30458] New petition received
+[2024-06-05 15:23:10.834] [micropagosdatabase] [middleware] [trace] [b3dff4f30458] url: /masks/b3dff4f30458, method: GET
+[2024-06-05 15:23:10.834] [micropagosdatabase] [handler] [info] [b3dff4f30458] starting to get the maskpatterns
+[2024-06-05 15:23:10.834] [micropagosdatabase] [database] [trace] [b3dff4f30458] starting to get the mask patters
+[2024-06-05 15:23:10.834] [micropagosdatabase] [database] [trace] [b3dff4f30458] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:23:11.048] [micropagosdatabase] [database] [info] [b3dff4f30458] the query in the database tooks: 213.8572ms
+[2024-06-05 15:23:11.049] [micropagosdatabase] [middleware] [info] [b3dff4f30458] Request took 215.2297ms
+[2024-06-05 15:24:10.844] [micropagosdatabase] [middleware] [info] [295e4187814e] New petition received
+[2024-06-05 15:24:10.844] [micropagosdatabase] [middleware] [trace] [295e4187814e] url: /masks/295e4187814e, method: GET
+[2024-06-05 15:24:10.844] [micropagosdatabase] [handler] [info] [295e4187814e] starting to get the maskpatterns
+[2024-06-05 15:24:10.844] [micropagosdatabase] [database] [trace] [295e4187814e] starting to get the mask patters
+[2024-06-05 15:24:10.844] [micropagosdatabase] [database] [trace] [295e4187814e] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:24:11.058] [micropagosdatabase] [database] [info] [295e4187814e] the query in the database tooks: 213.2968ms
+[2024-06-05 15:24:11.059] [micropagosdatabase] [middleware] [info] [295e4187814e] Request took 214.7314ms
+[2024-06-05 15:25:10.842] [micropagosdatabase] [middleware] [info] [ab452658bdda] New petition received
+[2024-06-05 15:25:10.842] [micropagosdatabase] [middleware] [trace] [ab452658bdda] url: /masks/ab452658bdda, method: GET
+[2024-06-05 15:25:10.842] [micropagosdatabase] [handler] [info] [ab452658bdda] starting to get the maskpatterns
+[2024-06-05 15:25:10.842] [micropagosdatabase] [database] [trace] [ab452658bdda] starting to get the mask patters
+[2024-06-05 15:25:10.842] [micropagosdatabase] [database] [trace] [ab452658bdda] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:25:11.058] [micropagosdatabase] [database] [info] [ab452658bdda] the query in the database tooks: 215.8021ms
+[2024-06-05 15:25:11.059] [micropagosdatabase] [middleware] [info] [ab452658bdda] Request took 216.8198ms
+[2024-06-05 15:26:10.839] [micropagosdatabase] [middleware] [info] [4d420d7995fa] New petition received
+[2024-06-05 15:26:10.839] [micropagosdatabase] [middleware] [trace] [4d420d7995fa] url: /masks/4d420d7995fa, method: GET
+[2024-06-05 15:26:10.839] [micropagosdatabase] [handler] [info] [4d420d7995fa] starting to get the maskpatterns
+[2024-06-05 15:26:10.839] [micropagosdatabase] [database] [trace] [4d420d7995fa] starting to get the mask patters
+[2024-06-05 15:26:10.839] [micropagosdatabase] [database] [trace] [4d420d7995fa] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:26:11.118] [micropagosdatabase] [database] [info] [4d420d7995fa] the query in the database tooks: 278.4979ms
+[2024-06-05 15:26:11.118] [micropagosdatabase] [middleware] [info] [4d420d7995fa] Request took 279.078ms
+[2024-06-05 15:27:10.834] [micropagosdatabase] [middleware] [info] [e4976e19182e] New petition received
+[2024-06-05 15:27:10.834] [micropagosdatabase] [middleware] [trace] [e4976e19182e] url: /masks/e4976e19182e, method: GET
+[2024-06-05 15:27:10.835] [micropagosdatabase] [handler] [info] [e4976e19182e] starting to get the maskpatterns
+[2024-06-05 15:27:10.835] [micropagosdatabase] [database] [trace] [e4976e19182e] starting to get the mask patters
+[2024-06-05 15:27:10.835] [micropagosdatabase] [database] [trace] [e4976e19182e] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:27:11.046] [micropagosdatabase] [database] [info] [e4976e19182e] the query in the database tooks: 211.5776ms
+[2024-06-05 15:27:11.050] [micropagosdatabase] [middleware] [info] [e4976e19182e] Request took 215.7638ms
+[2024-06-05 15:28:10.844] [micropagosdatabase] [middleware] [info] [02675c7b5ca4] New petition received
+[2024-06-05 15:28:10.845] [micropagosdatabase] [middleware] [trace] [02675c7b5ca4] url: /masks/02675c7b5ca4, method: GET
+[2024-06-05 15:28:10.845] [micropagosdatabase] [handler] [info] [02675c7b5ca4] starting to get the maskpatterns
+[2024-06-05 15:28:10.845] [micropagosdatabase] [database] [trace] [02675c7b5ca4] starting to get the mask patters
+[2024-06-05 15:28:10.845] [micropagosdatabase] [database] [trace] [02675c7b5ca4] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:28:11.060] [micropagosdatabase] [database] [info] [02675c7b5ca4] the query in the database tooks: 215.6123ms
+[2024-06-05 15:28:11.061] [micropagosdatabase] [middleware] [info] [02675c7b5ca4] Request took 216.368ms
+[2024-06-05 15:29:10.843] [micropagosdatabase] [middleware] [info] [a4b87e1bdc41] New petition received
+[2024-06-05 15:29:10.843] [micropagosdatabase] [middleware] [trace] [a4b87e1bdc41] url: /masks/a4b87e1bdc41, method: GET
+[2024-06-05 15:29:10.843] [micropagosdatabase] [handler] [info] [a4b87e1bdc41] starting to get the maskpatterns
+[2024-06-05 15:29:10.843] [micropagosdatabase] [database] [trace] [a4b87e1bdc41] starting to get the mask patters
+[2024-06-05 15:29:10.843] [micropagosdatabase] [database] [trace] [a4b87e1bdc41] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:29:11.057] [micropagosdatabase] [database] [info] [a4b87e1bdc41] the query in the database tooks: 213.3039ms
+[2024-06-05 15:29:11.057] [micropagosdatabase] [middleware] [info] [a4b87e1bdc41] Request took 214.2255ms
+[2024-06-05 15:30:10.835] [micropagosdatabase] [middleware] [info] [227b6b3aab93] New petition received
+[2024-06-05 15:30:10.835] [micropagosdatabase] [middleware] [trace] [227b6b3aab93] url: /masks/227b6b3aab93, method: GET
+[2024-06-05 15:30:10.836] [micropagosdatabase] [handler] [info] [227b6b3aab93] starting to get the maskpatterns
+[2024-06-05 15:30:10.836] [micropagosdatabase] [database] [trace] [227b6b3aab93] starting to get the mask patters
+[2024-06-05 15:30:10.836] [micropagosdatabase] [database] [trace] [227b6b3aab93] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:30:11.050] [micropagosdatabase] [database] [info] [227b6b3aab93] the query in the database tooks: 214.162ms
+[2024-06-05 15:30:11.051] [micropagosdatabase] [middleware] [info] [227b6b3aab93] Request took 215.6339ms
+[2024-06-05 15:31:10.834] [micropagosdatabase] [middleware] [info] [baab11f68dac] New petition received
+[2024-06-05 15:31:10.834] [micropagosdatabase] [middleware] [trace] [baab11f68dac] url: /masks/baab11f68dac, method: GET
+[2024-06-05 15:31:10.834] [micropagosdatabase] [handler] [info] [baab11f68dac] starting to get the maskpatterns
+[2024-06-05 15:31:10.834] [micropagosdatabase] [database] [trace] [baab11f68dac] starting to get the mask patters
+[2024-06-05 15:31:10.834] [micropagosdatabase] [database] [trace] [baab11f68dac] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:31:11.046] [micropagosdatabase] [database] [info] [baab11f68dac] the query in the database tooks: 211.6788ms
+[2024-06-05 15:31:11.046] [micropagosdatabase] [middleware] [info] [baab11f68dac] Request took 212.4913ms
+[2024-06-05 15:32:10.846] [micropagosdatabase] [middleware] [info] [bb36ab652300] New petition received
+[2024-06-05 15:32:10.846] [micropagosdatabase] [middleware] [trace] [bb36ab652300] url: /masks/bb36ab652300, method: GET
+[2024-06-05 15:32:10.846] [micropagosdatabase] [handler] [info] [bb36ab652300] starting to get the maskpatterns
+[2024-06-05 15:32:10.846] [micropagosdatabase] [database] [trace] [bb36ab652300] starting to get the mask patters
+[2024-06-05 15:32:10.846] [micropagosdatabase] [database] [trace] [bb36ab652300] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:32:11.065] [micropagosdatabase] [database] [info] [bb36ab652300] the query in the database tooks: 218.3416ms
+[2024-06-05 15:32:11.065] [micropagosdatabase] [middleware] [info] [bb36ab652300] Request took 219.4279ms
+[2024-06-05 15:33:10.850] [micropagosdatabase] [middleware] [info] [7d57815a5cfe] New petition received
+[2024-06-05 15:33:10.850] [micropagosdatabase] [middleware] [trace] [7d57815a5cfe] url: /masks/7d57815a5cfe, method: GET
+[2024-06-05 15:33:10.851] [micropagosdatabase] [handler] [info] [7d57815a5cfe] starting to get the maskpatterns
+[2024-06-05 15:33:10.851] [micropagosdatabase] [database] [trace] [7d57815a5cfe] starting to get the mask patters
+[2024-06-05 15:33:10.851] [micropagosdatabase] [database] [trace] [7d57815a5cfe] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:33:11.069] [micropagosdatabase] [database] [info] [7d57815a5cfe] the query in the database tooks: 218.2999ms
+[2024-06-05 15:33:11.070] [micropagosdatabase] [middleware] [info] [7d57815a5cfe] Request took 219.7713ms
+[2024-06-05 15:34:10.843] [micropagosdatabase] [middleware] [info] [2f24523a93b9] New petition received
+[2024-06-05 15:34:10.843] [micropagosdatabase] [middleware] [trace] [2f24523a93b9] url: /masks/2f24523a93b9, method: GET
+[2024-06-05 15:34:10.843] [micropagosdatabase] [handler] [info] [2f24523a93b9] starting to get the maskpatterns
+[2024-06-05 15:34:10.843] [micropagosdatabase] [database] [trace] [2f24523a93b9] starting to get the mask patters
+[2024-06-05 15:34:10.843] [micropagosdatabase] [database] [trace] [2f24523a93b9] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:34:11.050] [micropagosdatabase] [database] [info] [2f24523a93b9] the query in the database tooks: 206.823ms
+[2024-06-05 15:34:11.051] [micropagosdatabase] [middleware] [info] [2f24523a93b9] Request took 207.8964ms
+[2024-06-05 15:35:10.856] [micropagosdatabase] [middleware] [info] [95761e25915f] New petition received
+[2024-06-05 15:35:10.856] [micropagosdatabase] [middleware] [trace] [95761e25915f] url: /masks/95761e25915f, method: GET
+[2024-06-05 15:35:10.856] [micropagosdatabase] [handler] [info] [95761e25915f] starting to get the maskpatterns
+[2024-06-05 15:35:10.857] [micropagosdatabase] [database] [trace] [95761e25915f] starting to get the mask patters
+[2024-06-05 15:35:10.857] [micropagosdatabase] [database] [trace] [95761e25915f] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:35:11.073] [micropagosdatabase] [database] [info] [95761e25915f] the query in the database tooks: 215.7022ms
+[2024-06-05 15:35:11.073] [micropagosdatabase] [middleware] [info] [95761e25915f] Request took 216.8421ms
+[2024-06-05 15:36:10.844] [micropagosdatabase] [middleware] [info] [31fbf398b99d] New petition received
+[2024-06-05 15:36:10.844] [micropagosdatabase] [middleware] [trace] [31fbf398b99d] url: /masks/31fbf398b99d, method: GET
+[2024-06-05 15:36:10.844] [micropagosdatabase] [handler] [info] [31fbf398b99d] starting to get the maskpatterns
+[2024-06-05 15:36:10.844] [micropagosdatabase] [database] [trace] [31fbf398b99d] starting to get the mask patters
+[2024-06-05 15:36:10.844] [micropagosdatabase] [database] [trace] [31fbf398b99d] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:36:21.488] [micropagosdatabase] [database] [info] [31fbf398b99d] the query in the database tooks: 10.6440207s
+[2024-06-05 15:36:21.489] [micropagosdatabase] [middleware] [info] [31fbf398b99d] Request took 10.6451243s
+[2024-06-05 15:39:31.515] [micropagosdatabase] [middleware] [info] [3d7b847d39f0] New petition received
+[2024-06-05 15:39:31.515] [micropagosdatabase] [middleware] [trace] [3d7b847d39f0] url: /masks/3d7b847d39f0, method: GET
+[2024-06-05 15:39:31.516] [micropagosdatabase] [handler] [info] [3d7b847d39f0] starting to get the maskpatterns
+[2024-06-05 15:39:31.516] [micropagosdatabase] [database] [trace] [3d7b847d39f0] starting to get the mask patters
+[2024-06-05 15:39:31.516] [micropagosdatabase] [database] [trace] [3d7b847d39f0] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-05 15:39:31.728] [micropagosdatabase] [database] [info] [3d7b847d39f0] the query in the database tooks: 212.4787ms
+[2024-06-05 15:39:31.729] [micropagosdatabase] [middleware] [info] [3d7b847d39f0] Request took 213.9804ms

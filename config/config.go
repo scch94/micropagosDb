@@ -14,6 +14,8 @@ var Config MicropagosDatabaseConfiguration
 type MicropagosDatabaseConfiguration struct {
 	ServerPort           string         `json:"serverPort"`
 	LogLevel             string         `json:"log_level"`
+	QueryRetryCount      int            `json:"queryRetryCount"`
+	DbQueryTimeout       int            `json:"dbQueryTimeout"`
 	MySQLConnection      MySQLConfig    `json:"mysqlConnection"`
 	MyPostgresConnection PostgresConfig `json:"myPostgresConnection"`
 }
@@ -33,6 +35,7 @@ type ConnectionConfig struct {
 	MaxOpenConns     int    `json:"maxOpenConns"`
 	MaxIdleConns     int    `json:"maxIdleConns"`
 	ConnMaxLifeTime  int    `json:"conMaxLifeTime"`
+	ConnMaxIdleTime  int    `json:"conMaxIdleTime"`
 }
 
 func Upconfig(ctx context.Context) error {
@@ -40,7 +43,7 @@ func Upconfig(ctx context.Context) error {
 	ctx = ins_log.SetPackageNameInContext(ctx, "config")
 
 	ins_log.Info(ctx, "starting to get the config struct ")
-	err := Gconfiguration.GetConfig(&Config)
+	err := Gconfiguration.GetConfig(&Config, "../config")
 	if err != nil {
 		ins_log.Fatalf(ctx, "error in Gconfiguration.GetConfig() ", err)
 		return err
