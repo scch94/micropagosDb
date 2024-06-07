@@ -26,7 +26,7 @@ func (handler *Handler) InserMessage(c *gin.Context) {
 		}
 
 	}
-	ins_log.Tracef(ctx, "this is the data that we recibed in the petition to insert the message %s", request)
+	ins_log.Tracef(ctx, "this is the data that we recibed in the petition to insert the message %+v", request)
 	ins_log.Info(ctx, "starting to insert message")
 
 	//realizamos la consulta

@@ -14,6 +14,7 @@ var Config MicropagosDatabaseConfiguration
 type MicropagosDatabaseConfiguration struct {
 	ServerPort           string         `json:"serverPort"`
 	LogLevel             string         `json:"log_level"`
+	Log_name             string         `json:"log_name"`
 	QueryRetryCount      int            `json:"queryRetryCount"`
 	DbQueryTimeout       int            `json:"dbQueryTimeout"`
 	MySQLConnection      MySQLConfig    `json:"mysqlConnection"`
@@ -43,7 +44,7 @@ func Upconfig(ctx context.Context) error {
 	ctx = ins_log.SetPackageNameInContext(ctx, "config")
 
 	ins_log.Info(ctx, "starting to get the config struct ")
-	err := Gconfiguration.GetConfig(&Config, "../config")
+	err := Gconfiguration.GetConfig(&Config, "../config", "micropagosDbConfig.json")
 	if err != nil {
 		ins_log.Fatalf(ctx, "error in Gconfiguration.GetConfig() ", err)
 		return err

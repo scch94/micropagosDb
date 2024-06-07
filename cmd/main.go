@@ -5,6 +5,7 @@ import (
 	"io"
 	"os"
 	"path/filepath"
+	"strings"
 	"time"
 
 	"github.com/scch94/ins_log"
@@ -18,13 +19,8 @@ func main() {
 	// Creamos el contexto para esta ejecución
 	ctx := context.Background()
 
-	logFileName, err := initializeLogger()
-	if err != nil {
-		panic(err)
-	}
-	defer logFileName.Close()
+	go initializeAndWatchLogger(ctx)
 
-	// Load configuration
 	if err := config.Upconfig(ctx); err != nil {
 		ins_log.Errorf(ctx, "error loading configuration: %v", err)
 		return
@@ -45,30 +41,50 @@ func main() {
 	}
 }
 
-func initializeLogger() (*os.File, error) {
-	logDir := "../log"
-
-	// Create the log directory if it doesn't exist
-	if err := os.MkdirAll(logDir, 0755); err != nil {
-		return nil, err
-	}
-
-	//Definimos el nombre del archivo
-	today := time.Now().Format("2006-01-02_15")
-	logFileName := filepath.Join(logDir, "micropagosdatabasegateway_"+today+".log")
-
-	//abrimos el archivo del log
-	file, err := os.OpenFile(logFileName, os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0644)
-	if err != nil {
-		return nil, err
-	}
-
-	//configuramos para abrir el log file y la consola
-	multiWriter := io.MultiWriter(os.Stdout, file)
-	ins_log.StartLoggerWithWriter(multiWriter)
-	return file, nil
-}
-
 func version() string {
 	return "1.0.0"
+}
+
+func initializeAndWatchLogger(ctx context.Context) {
+	var file *os.File
+	var logFileName string
+	var err error
+	for {
+		select {
+		case <-ctx.Done():
+			return
+		default:
+			logDir := "../log"
+
+			// Create the log directory if it doesn't exist
+			if err = os.MkdirAll(logDir, 0755); err != nil {
+				ins_log.Errorf(ctx, "error creating log directory: %v", err)
+				return
+			}
+
+			// Define the log file name
+			today := time.Now().Format("2006-01-02 15")
+			replacer := strings.NewReplacer(" ", "_")
+			today = replacer.Replace(today)
+			logFileName = filepath.Join(logDir, config.Config.Log_name+today+".log")
+
+			// Open the log file
+			file, err = os.OpenFile(logFileName, os.O_WRONLY|os.O_CREATE|os.O_APPEND, 0644)
+			if err != nil {
+				ins_log.Errorf(ctx, "error opening log file: %v", err)
+				return
+			}
+
+			// Create a writer that writes to both file and console
+			multiWriter := io.MultiWriter(os.Stdout, file)
+			ins_log.StartLoggerWithWriter(multiWriter)
+
+			// Esperar hasta el inicio de la próxima hora
+			nextHour := time.Now().Truncate(time.Hour).Add(time.Hour)
+			time.Sleep(time.Until(nextHour))
+
+			// Close the previous log file
+			file.Close()
+		}
+	}
 }

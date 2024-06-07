@@ -1,0 +1,37 @@
+{
+    "serverPort": ":2122",
+    "log_level": "trace",
+    "log_name":"micropagosdatabasegateway_",
+    "queryRetryCount": 3,
+    "dbQueryTimeout": 2500,
+    "mysqlConnection": {
+        "raven": {
+            "connectionString": "raven:micropagos@tcp(192.168.27.38:3306)/raven",
+            "maxOpenConns": 200,
+            "maxIdleConns": 20,
+            "conMaxLifeTime": 1800,
+            "connMaxIdleTime": 1500
+        },
+        "weaver": {
+            "connectionString": "weaver:micropagos@tcp(192.168.27.38:3306)/weaver",
+            "maxOpenConns": 200,
+            "maxIdleConns": 20,
+            "conMaxLifeTime": 1800,
+            "connMaxIdleTime": 1500
+        }
+    },
+    "myPostgresConnection": {
+        "raven": {
+            "connectionString": "",
+            "maxOpenConns": 0,
+            "maxIdleConns": 0,
+            "conMaxLifeTime": 0
+        },
+        "weaver": {
+            "connectionString": "",
+            "maxOpenConns": 0,
+            "maxIdleConns": 0,
+            "conMaxLifeTime": 0
+        }
+    }
+}
