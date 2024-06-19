@@ -37,7 +37,7 @@ func GetUserDomain(r request.GetUserDomain, ctx context.Context) (*modeldb.UserD
 		// Realizar la consulta
 		db := GetDBUsers()
 		err = db.QueryRowContext(queryCtx, mySQLGetDomain, r.UserName).Scan(&domainModel.Domainname, &domainModel.Username, &domainModel.Password)
-		cancel()
+		defer cancel()
 		if err == nil {
 			// Consulta exitosa, salir del bucle
 			break

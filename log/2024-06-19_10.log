@@ -1,0 +1,189 @@
+[2024-06-19 10:06:34.628] [Gconfiguration] [] [info] [] ending to get the configuration
+[2024-06-19 10:06:34.628] [Gconfiguration] [] [trace] [] this is the data that we have in the configuration {"serverPort":":2122","log_level":"trace","log_name":"micropagosdatabasegateway_","queryRetryCount":3,"dbQueryTimeout":2500,"mysqlConnection":{"raven":{"connectionString":"raven:micropagos@tcp(192.168.27.38:3306)/raven","maxOpenConns":200,"maxIdleConns":50,"conMaxLifeTime":3600,"conMaxIdleTime":0},"weaver":{"connectionString":"weaver:micropagos@tcp(192.168.27.38:3306)/weaver","maxOpenConns":200,"maxIdleConns":50,"conMaxLifeTime":3600,"conMaxIdleTime":0}},"myPostgresConnection":{"raven":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0},"weaver":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0}}}
+[2024-06-19 10:06:34.629] [micropagosdatabase] [main] [info] [] startig micropagos database module version : 1.0.0
+[2024-06-19 10:06:45.444] [micropagosdatabase] [database] [info] [] conected to the mysql message database
+[2024-06-19 10:06:56.112] [micropagosdatabase] [database] [info] [] conected to the mysql user database
+[2024-06-19 10:06:56.113] [micropagosdatabase] [server] [info] [] Starting server on Port: :2122
+[2024-06-19 10:06:58.035] [micropagosdatabase] [middleware] [info] [1] New petition received
+[2024-06-19 10:06:58.035] [micropagosdatabase] [middleware] [trace] [1] url: /usersInfo/1, method: GET
+[2024-06-19 10:06:58.035] [micropagosdatabase] [handler] [info] [1] starting to get users info
+[2024-06-19 10:06:58.035] [micropagosdatabase] [database] [trace] [1] starting to get the users information
+[2024-06-19 10:06:58.035] [micropagosdatabase] [database] [trace] [1] this is the QUERY: SELECT u.id as userId, u.username as userName, u.password as userPassword, u.lastlogin as userLastLogin, d.name as domainNameFROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 10:06:58.252] [micropagosdatabase] [database] [trace] [1] GetUsersInfo error on attempt 1: Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = ' at line 1
+[2024-06-19 10:06:58.466] [micropagosdatabase] [database] [trace] [1] GetUsersInfo error on attempt 2: Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = ' at line 1
+[2024-06-19 10:06:58.692] [micropagosdatabase] [database] [trace] [1] GetUsersInfo error on attempt 3: Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = ' at line 1
+[2024-06-19 10:06:58.692] [micropagosdatabase] [database] [error] [1] query error Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = ' at line 1
+[2024-06-19 10:06:58.693] [micropagosdatabase] [handler] [error] [1] error getting users info in the database: Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = ' at line 1
+[2024-06-19 10:06:58.693] [micropagosdatabase] [middleware] [info] [1] Request took 657.9464ms
+[2024-06-19 10:09:37.640] [Gconfiguration] [] [info] [] ending to get the configuration
+[2024-06-19 10:09:37.641] [Gconfiguration] [] [trace] [] this is the data that we have in the configuration {"serverPort":":2122","log_level":"trace","log_name":"micropagosdatabasegateway_","queryRetryCount":3,"dbQueryTimeout":2500,"mysqlConnection":{"raven":{"connectionString":"raven:micropagos@tcp(192.168.27.38:3306)/raven","maxOpenConns":200,"maxIdleConns":50,"conMaxLifeTime":3600,"conMaxIdleTime":0},"weaver":{"connectionString":"weaver:micropagos@tcp(192.168.27.38:3306)/weaver","maxOpenConns":200,"maxIdleConns":50,"conMaxLifeTime":3600,"conMaxIdleTime":0}},"myPostgresConnection":{"raven":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0},"weaver":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0}}}
+[2024-06-19 10:09:37.641] [micropagosdatabase] [main] [info] [] startig micropagos database module version : 1.0.0
+[2024-06-19 10:09:48.375] [micropagosdatabase] [database] [info] [] conected to the mysql message database
+[2024-06-19 10:09:59.040] [micropagosdatabase] [database] [info] [] conected to the mysql user database
+[2024-06-19 10:09:59.040] [micropagosdatabase] [server] [info] [] Starting server on Port: :2122
+[2024-06-19 10:10:00.699] [micropagosdatabase] [middleware] [info] [1] New petition received
+[2024-06-19 10:10:00.699] [micropagosdatabase] [middleware] [trace] [1] url: /usersInfo/1, method: GET
+[2024-06-19 10:10:00.699] [micropagosdatabase] [handler] [info] [1] starting to get users info
+[2024-06-19 10:10:00.699] [micropagosdatabase] [database] [trace] [1] starting to get the users information
+[2024-06-19 10:10:00.699] [micropagosdatabase] [database] [trace] [1] this is the QUERY: SELECT u.id as userId, u.username as userName, u.password as userPassword, u.lastlogin as userLastLogin, d.name as domainNameFROM 'user' u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 10:10:00.913] [micropagosdatabase] [database] [trace] [1] GetUsersInfo error on attempt 1: Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''user' u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id ' at line 1
+[2024-06-19 10:10:01.128] [micropagosdatabase] [database] [trace] [1] GetUsersInfo error on attempt 2: Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''user' u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id ' at line 1
+[2024-06-19 10:10:01.341] [micropagosdatabase] [database] [trace] [1] GetUsersInfo error on attempt 3: Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''user' u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id ' at line 1
+[2024-06-19 10:10:01.342] [micropagosdatabase] [database] [error] [1] query error Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''user' u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id ' at line 1
+[2024-06-19 10:10:01.342] [micropagosdatabase] [handler] [error] [1] error getting users info in the database: Error 1064 (42000): You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ''user' u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id ' at line 1
+[2024-06-19 10:10:01.342] [micropagosdatabase] [middleware] [info] [1] Request took 643.5874ms
+[2024-06-19 10:12:49.707] [Gconfiguration] [] [info] [] ending to get the configuration
+[2024-06-19 10:12:49.707] [Gconfiguration] [] [trace] [] this is the data that we have in the configuration {"serverPort":":2122","log_level":"trace","log_name":"micropagosdatabasegateway_","queryRetryCount":3,"dbQueryTimeout":2500,"mysqlConnection":{"raven":{"connectionString":"raven:micropagos@tcp(192.168.27.38:3306)/raven","maxOpenConns":200,"maxIdleConns":50,"conMaxLifeTime":3600,"conMaxIdleTime":0},"weaver":{"connectionString":"weaver:micropagos@tcp(192.168.27.38:3306)/weaver","maxOpenConns":200,"maxIdleConns":50,"conMaxLifeTime":3600,"conMaxIdleTime":0}},"myPostgresConnection":{"raven":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0},"weaver":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0}}}
+[2024-06-19 10:12:49.707] [micropagosdatabase] [main] [info] [] startig micropagos database module version : 1.0.0
+[2024-06-19 10:13:00.474] [micropagosdatabase] [database] [info] [] conected to the mysql message database
+[2024-06-19 10:13:11.144] [micropagosdatabase] [database] [info] [] conected to the mysql user database
+[2024-06-19 10:13:11.144] [micropagosdatabase] [server] [info] [] Starting server on Port: :2122
+[2024-06-19 10:13:17.425] [micropagosdatabase] [middleware] [info] [1] New petition received
+[2024-06-19 10:13:17.425] [micropagosdatabase] [middleware] [trace] [1] url: /usersInfo/1, method: GET
+[2024-06-19 10:13:17.425] [micropagosdatabase] [handler] [info] [1] starting to get users info
+[2024-06-19 10:13:17.425] [micropagosdatabase] [database] [trace] [1] starting to get the users information
+[2024-06-19 10:13:17.425] [micropagosdatabase] [database] [trace] [1] this is the QUERY: SELECT u.id as userId, u.username as userName, u.password as userPassword, u.lastlogin as userLastLogin, d.name as domainName FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 10:13:17.639] [micropagosdatabase] [database] [trace] [1] GetUsersInfo error on attempt 1: Error 1146 (42S02): Table 'raven.user' doesn't exist
+[2024-06-19 10:13:17.855] [micropagosdatabase] [database] [trace] [1] GetUsersInfo error on attempt 2: Error 1146 (42S02): Table 'raven.user' doesn't exist
+[2024-06-19 10:13:18.076] [micropagosdatabase] [database] [trace] [1] GetUsersInfo error on attempt 3: Error 1146 (42S02): Table 'raven.user' doesn't exist
+[2024-06-19 10:13:18.076] [micropagosdatabase] [database] [error] [1] query error Error 1146 (42S02): Table 'raven.user' doesn't exist
+[2024-06-19 10:13:18.076] [micropagosdatabase] [handler] [error] [1] error getting users info in the database: Error 1146 (42S02): Table 'raven.user' doesn't exist
+[2024-06-19 10:13:18.077] [micropagosdatabase] [middleware] [info] [1] Request took 651.9053ms
+[2024-06-19 10:14:05.301] [Gconfiguration] [] [info] [] ending to get the configuration
+[2024-06-19 10:14:05.301] [Gconfiguration] [] [trace] [] this is the data that we have in the configuration {"serverPort":":2122","log_level":"trace","log_name":"micropagosdatabasegateway_","queryRetryCount":3,"dbQueryTimeout":2500,"mysqlConnection":{"raven":{"connectionString":"raven:micropagos@tcp(192.168.27.38:3306)/raven","maxOpenConns":200,"maxIdleConns":50,"conMaxLifeTime":3600,"conMaxIdleTime":0},"weaver":{"connectionString":"weaver:micropagos@tcp(192.168.27.38:3306)/weaver","maxOpenConns":200,"maxIdleConns":50,"conMaxLifeTime":3600,"conMaxIdleTime":0}},"myPostgresConnection":{"raven":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0},"weaver":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0}}}
+[2024-06-19 10:14:05.302] [micropagosdatabase] [main] [info] [] startig micropagos database module version : 1.0.0
+[2024-06-19 10:14:16.031] [micropagosdatabase] [database] [info] [] conected to the mysql message database
+[2024-06-19 10:14:26.695] [micropagosdatabase] [database] [info] [] conected to the mysql user database
+[2024-06-19 10:14:26.695] [micropagosdatabase] [server] [info] [] Starting server on Port: :2122
+[2024-06-19 10:14:52.850] [micropagosdatabase] [middleware] [info] [1] New petition received
+[2024-06-19 10:14:52.850] [micropagosdatabase] [middleware] [trace] [1] url: /usersInfo/1, method: GET
+[2024-06-19 10:14:52.850] [micropagosdatabase] [handler] [info] [1] starting to get users info
+[2024-06-19 10:14:52.850] [micropagosdatabase] [database] [trace] [1] starting to get the users information
+[2024-06-19 10:14:52.850] [micropagosdatabase] [database] [trace] [1] this is the QUERY: SELECT u.id as userId, u.username as userName, u.password as userPassword, u.lastlogin as userLastLogin, d.name as domainName FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 10:14:53.072] [micropagosdatabase] [database] [info] [1] the query in the database tooks: 221.5222ms
+[2024-06-19 10:14:53.073] [micropagosdatabase] [middleware] [info] [1] Request took 222.6294ms
+[2024-06-19 10:18:51.801] [Gconfiguration] [] [info] [] ending to get the configuration
+[2024-06-19 10:18:51.801] [Gconfiguration] [] [trace] [] this is the data that we have in the configuration {"serverPort":":2122","log_level":"trace","log_name":"micropagosdatabasegateway_","queryRetryCount":3,"dbQueryTimeout":2500,"mysqlConnection":{"raven":{"connectionString":"raven:micropagos@tcp(192.168.27.38:3306)/raven","maxOpenConns":200,"maxIdleConns":50,"conMaxLifeTime":3600,"conMaxIdleTime":0},"weaver":{"connectionString":"weaver:micropagos@tcp(192.168.27.38:3306)/weaver","maxOpenConns":200,"maxIdleConns":50,"conMaxLifeTime":3600,"conMaxIdleTime":0}},"myPostgresConnection":{"raven":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0},"weaver":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0}}}
+[2024-06-19 10:18:51.802] [micropagosdatabase] [main] [info] [] startig micropagos database module version : 1.0.0
+[2024-06-19 10:19:02.534] [micropagosdatabase] [database] [info] [] conected to the mysql message database
+[2024-06-19 10:19:13.197] [micropagosdatabase] [database] [info] [] conected to the mysql user database
+[2024-06-19 10:19:13.197] [micropagosdatabase] [server] [info] [] Starting server on Port: :2122
+[2024-06-19 10:19:29.910] [micropagosdatabase] [middleware] [info] [1] New petition received
+[2024-06-19 10:19:29.911] [micropagosdatabase] [middleware] [trace] [1] url: /usersInfo/1, method: GET
+[2024-06-19 10:19:29.911] [micropagosdatabase] [handler] [info] [1] starting to get users info
+[2024-06-19 10:19:29.911] [micropagosdatabase] [database] [trace] [1] starting to get the users information
+[2024-06-19 10:19:29.911] [micropagosdatabase] [database] [trace] [1] this is the QUERY: SELECT u.id, u.username, u.password, u.lastlogin, d.name FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 10:19:30.139] [micropagosdatabase] [database] [info] [1] the query in the database tooks: 227.0909ms
+[2024-06-19 10:19:30.139] [micropagosdatabase] [middleware] [info] [1] Request took 228.3736ms
+[2024-06-19 10:22:45.204] [Gconfiguration] [] [info] [] ending to get the configuration
+[2024-06-19 10:22:45.205] [Gconfiguration] [] [trace] [] this is the data that we have in the configuration {"serverPort":":2122","log_level":"trace","log_name":"micropagosdatabasegateway_","queryRetryCount":3,"dbQueryTimeout":2500,"mysqlConnection":{"raven":{"connectionString":"raven:micropagos@tcp(192.168.27.38:3306)/raven","maxOpenConns":200,"maxIdleConns":50,"conMaxLifeTime":3600,"conMaxIdleTime":0},"weaver":{"connectionString":"weaver:micropagos@tcp(192.168.27.38:3306)/weaver","maxOpenConns":200,"maxIdleConns":50,"conMaxLifeTime":3600,"conMaxIdleTime":0}},"myPostgresConnection":{"raven":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0},"weaver":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0}}}
+[2024-06-19 10:22:45.206] [micropagosdatabase] [main] [info] [] startig micropagos database module version : 1.0.0
+[2024-06-19 10:22:55.935] [micropagosdatabase] [database] [info] [] conected to the mysql message database
+[2024-06-19 10:23:06.601] [micropagosdatabase] [database] [info] [] conected to the mysql user database
+[2024-06-19 10:23:06.602] [micropagosdatabase] [server] [info] [] Starting server on Port: :2122
+[2024-06-19 10:23:17.935] [micropagosdatabase] [middleware] [info] [1] New petition received
+[2024-06-19 10:23:17.936] [micropagosdatabase] [middleware] [trace] [1] url: /usersInfo/1, method: GET
+[2024-06-19 10:23:17.936] [micropagosdatabase] [handler] [info] [1] starting to get users info
+[2024-06-19 10:23:17.936] [micropagosdatabase] [database] [trace] [1] starting to get the users information
+[2024-06-19 10:23:17.936] [micropagosdatabase] [database] [trace] [1] this is the QUERY: SELECT u.id, u.username, u.password, u.lastlogin, d.name FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 10:23:18.233] [micropagosdatabase] [database] [info] [1] the query in the database tooks: 296.6863ms
+[2024-06-19 10:23:18.233] [micropagosdatabase] [middleware] [info] [1] Request took 297.8753ms
+[2024-06-19 10:23:55.675] [micropagosdatabase] [middleware] [info] [1] New petition received
+[2024-06-19 10:23:55.675] [micropagosdatabase] [middleware] [trace] [1] url: /masks/1, method: GET
+[2024-06-19 10:23:55.675] [micropagosdatabase] [handler] [info] [1] starting to get the maskpatterns
+[2024-06-19 10:23:55.675] [micropagosdatabase] [database] [trace] [1] starting to get the mask patters
+[2024-06-19 10:23:55.675] [micropagosdatabase] [database] [trace] [1] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 10:23:55.892] [micropagosdatabase] [database] [info] [1] the query in the database tooks: 216.8861ms
+[2024-06-19 10:23:55.893] [micropagosdatabase] [middleware] [info] [1] Request took 218.3994ms
+[2024-06-19 10:24:03.657] [micropagosdatabase] [middleware] [info] [2] New petition received
+[2024-06-19 10:24:03.657] [micropagosdatabase] [middleware] [trace] [2] url: /filter/94326996/11789/2, method: GET
+[2024-06-19 10:24:03.657] [micropagosdatabase] [handler] [info] [2] starting to check if the shortnumber 11789 with the mobile 94326996 are filter
+[2024-06-19 10:24:03.657] [micropagosdatabase] [database] [trace] [2] Checking if the combination of destination and origin mobile numbers is not filtered.
+[2024-06-19 10:24:03.657] [micropagosdatabase] [database] [trace] [2] this is the QUERY: SELECT id, added, comment, mobile_countryisocode, mobile_number, shortnumber FROM filter WHERE mobile_number = ? AND shortnumber = ? AND userremoved IS NULL AND (direction IS NULL OR direction = 'OUT') and the params: mobile_number=94326996, shortnumber=11789
+[2024-06-19 10:24:06.161] [micropagosdatabase] [database] [trace] [2] getUserDomain error on attempt 1: context deadline exceeded
+[2024-06-19 10:24:08.675] [micropagosdatabase] [database] [trace] [2] getUserDomain error on attempt 2: context deadline exceeded
+[2024-06-19 10:24:11.183] [micropagosdatabase] [database] [trace] [2] getUserDomain error on attempt 3: context deadline exceeded
+[2024-06-19 10:24:11.183] [micropagosdatabase] [database] [error] [2] query error context deadline exceeded
+[2024-06-19 10:24:11.183] [micropagosdatabase] [database] [info] [2] the query in the database tooks: 7.5261838s
+[2024-06-19 10:24:11.183] [micropagosdatabase] [database] [trace] [2] and this is the information of the database: {          false}
+[2024-06-19 10:24:11.183] [micropagosdatabase] [handler] [error] [2] error getting filter response
+[2024-06-19 10:24:11.184] [micropagosdatabase] [middleware] [info] [2] Request took 7.5272213s
+[2024-06-19 10:24:21.789] [micropagosdatabase] [middleware] [info] [2] New petition received
+[2024-06-19 10:24:21.789] [micropagosdatabase] [middleware] [trace] [2] url: /filter/94326996/11789/2, method: GET
+[2024-06-19 10:24:21.789] [micropagosdatabase] [handler] [info] [2] starting to check if the shortnumber 11789 with the mobile 94326996 are filter
+[2024-06-19 10:24:21.789] [micropagosdatabase] [database] [trace] [2] Checking if the combination of destination and origin mobile numbers is not filtered.
+[2024-06-19 10:24:21.789] [micropagosdatabase] [database] [trace] [2] this is the QUERY: SELECT id, added, comment, mobile_countryisocode, mobile_number, shortnumber FROM filter WHERE mobile_number = ? AND shortnumber = ? AND userremoved IS NULL AND (direction IS NULL OR direction = 'OUT') and the params: mobile_number=94326996, shortnumber=11789
+[2024-06-19 10:24:24.299] [micropagosdatabase] [database] [trace] [2] getUserDomain error on attempt 1: context deadline exceeded
+[2024-06-19 10:24:26.806] [micropagosdatabase] [database] [trace] [2] getUserDomain error on attempt 2: context deadline exceeded
+[2024-06-19 10:24:29.315] [micropagosdatabase] [database] [trace] [2] getUserDomain error on attempt 3: context deadline exceeded
+[2024-06-19 10:24:29.315] [micropagosdatabase] [database] [error] [2] query error context deadline exceeded
+[2024-06-19 10:24:29.316] [micropagosdatabase] [database] [info] [2] the query in the database tooks: 7.5267043s
+[2024-06-19 10:24:29.316] [micropagosdatabase] [database] [trace] [2] and this is the information of the database: {          false}
+[2024-06-19 10:24:29.316] [micropagosdatabase] [handler] [error] [2] error getting filter response
+[2024-06-19 10:24:29.316] [micropagosdatabase] [middleware] [info] [2] Request took 7.5273841s
+[2024-06-19 10:25:28.416] [Gconfiguration] [] [info] [] ending to get the configuration
+[2024-06-19 10:25:28.416] [Gconfiguration] [] [trace] [] this is the data that we have in the configuration {"serverPort":":2122","log_level":"trace","log_name":"micropagosdatabasegateway_","queryRetryCount":3,"dbQueryTimeout":12000,"mysqlConnection":{"raven":{"connectionString":"raven:micropagos@tcp(192.168.27.38:3306)/raven","maxOpenConns":200,"maxIdleConns":50,"conMaxLifeTime":3600,"conMaxIdleTime":0},"weaver":{"connectionString":"weaver:micropagos@tcp(192.168.27.38:3306)/weaver","maxOpenConns":200,"maxIdleConns":50,"conMaxLifeTime":3600,"conMaxIdleTime":0}},"myPostgresConnection":{"raven":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0},"weaver":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0}}}
+[2024-06-19 10:25:28.417] [micropagosdatabase] [main] [info] [] startig micropagos database module version : 1.0.0
+[2024-06-19 10:25:39.094] [micropagosdatabase] [database] [info] [] conected to the mysql message database
+[2024-06-19 10:25:49.796] [micropagosdatabase] [database] [info] [] conected to the mysql user database
+[2024-06-19 10:25:49.796] [micropagosdatabase] [server] [info] [] Starting server on Port: :2122
+[2024-06-19 10:26:03.451] [micropagosdatabase] [middleware] [info] [1] New petition received
+[2024-06-19 10:26:03.451] [micropagosdatabase] [middleware] [trace] [1] url: /masks/1, method: GET
+[2024-06-19 10:26:03.451] [micropagosdatabase] [handler] [info] [1] starting to get the maskpatterns
+[2024-06-19 10:26:03.451] [micropagosdatabase] [database] [trace] [1] starting to get the mask patters
+[2024-06-19 10:26:03.451] [micropagosdatabase] [database] [trace] [1] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 10:26:03.668] [micropagosdatabase] [database] [info] [1] the query in the database tooks: 216.9463ms
+[2024-06-19 10:26:03.669] [micropagosdatabase] [middleware] [info] [1] Request took 218.0704ms
+[2024-06-19 10:27:15.340] [Gconfiguration] [] [info] [] ending to get the configuration
+[2024-06-19 10:27:15.340] [Gconfiguration] [] [trace] [] this is the data that we have in the configuration {"serverPort":":2122","log_level":"trace","log_name":"micropagosdatabasegateway_","queryRetryCount":3,"dbQueryTimeout":12000,"mysqlConnection":{"raven":{"connectionString":"raven:micropagos@tcp(192.168.27.38:3306)/raven","maxOpenConns":200,"maxIdleConns":50,"conMaxLifeTime":3600,"conMaxIdleTime":0},"weaver":{"connectionString":"weaver:micropagos@tcp(192.168.27.38:3306)/weaver","maxOpenConns":200,"maxIdleConns":50,"conMaxLifeTime":3600,"conMaxIdleTime":0}},"myPostgresConnection":{"raven":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0},"weaver":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0}}}
+[2024-06-19 10:27:15.341] [micropagosdatabase] [main] [info] [] startig micropagos database module version : 1.0.0
+[2024-06-19 10:27:26.081] [micropagosdatabase] [database] [info] [] conected to the mysql message database
+[2024-06-19 10:27:36.749] [micropagosdatabase] [database] [info] [] conected to the mysql user database
+[2024-06-19 10:27:36.749] [micropagosdatabase] [server] [info] [] Starting server on Port: :2122
+[2024-06-19 10:27:38.381] [micropagosdatabase] [middleware] [info] [2] New petition received
+[2024-06-19 10:27:38.382] [micropagosdatabase] [middleware] [trace] [2] url: /filter/94326996/11789/2, method: GET
+[2024-06-19 10:27:38.382] [micropagosdatabase] [handler] [info] [2] starting to check if the shortnumber 11789 with the mobile 94326996 are filter
+[2024-06-19 10:27:38.382] [micropagosdatabase] [database] [trace] [2] Checking if the combination of destination and origin mobile numbers is not filtered.
+[2024-06-19 10:27:38.383] [micropagosdatabase] [database] [trace] [2] this is the QUERY: SELECT id, added, comment, mobile_countryisocode, mobile_number, shortnumber FROM filter WHERE mobile_number = ? AND shortnumber = ? AND userremoved IS NULL AND (direction IS NULL OR direction = 'OUT') and the params: mobile_number=94326996, shortnumber=11789
+[2024-06-19 10:27:38.824] [micropagosdatabase] [database] [info] [2] the combination of destination and origin mobile numbers is not filter
+[2024-06-19 10:27:38.824] [micropagosdatabase] [database] [info] [2] the query in the database tooks: 441.4061ms
+[2024-06-19 10:27:38.824] [micropagosdatabase] [database] [trace] [2] and this is the information of the database: {          false}
+[2024-06-19 10:27:38.824] [micropagosdatabase] [middleware] [info] [2] Request took 442.9105ms
+[2024-06-19 10:27:41.277] [micropagosdatabase] [middleware] [info] [2] New petition received
+[2024-06-19 10:27:41.278] [micropagosdatabase] [middleware] [trace] [2] url: /filter/94326996/11789/2, method: GET
+[2024-06-19 10:27:41.278] [micropagosdatabase] [handler] [info] [2] starting to check if the shortnumber 11789 with the mobile 94326996 are filter
+[2024-06-19 10:27:41.278] [micropagosdatabase] [database] [trace] [2] Checking if the combination of destination and origin mobile numbers is not filtered.
+[2024-06-19 10:27:41.278] [micropagosdatabase] [database] [trace] [2] this is the QUERY: SELECT id, added, comment, mobile_countryisocode, mobile_number, shortnumber FROM filter WHERE mobile_number = ? AND shortnumber = ? AND userremoved IS NULL AND (direction IS NULL OR direction = 'OUT') and the params: mobile_number=94326996, shortnumber=11789
+[2024-06-19 10:27:41.713] [micropagosdatabase] [database] [info] [2] the combination of destination and origin mobile numbers is not filter
+[2024-06-19 10:27:41.713] [micropagosdatabase] [database] [info] [2] the query in the database tooks: 435.2625ms
+[2024-06-19 10:27:41.713] [micropagosdatabase] [database] [trace] [2] and this is the information of the database: {          false}
+[2024-06-19 10:27:41.714] [micropagosdatabase] [middleware] [info] [2] Request took 436.3834ms
+[2024-06-19 10:27:42.939] [micropagosdatabase] [middleware] [info] [1] New petition received
+[2024-06-19 10:27:42.941] [micropagosdatabase] [middleware] [trace] [1] url: /masks/1, method: GET
+[2024-06-19 10:27:42.941] [micropagosdatabase] [handler] [info] [1] starting to get the maskpatterns
+[2024-06-19 10:27:42.941] [micropagosdatabase] [database] [trace] [1] starting to get the mask patters
+[2024-06-19 10:27:42.941] [micropagosdatabase] [database] [trace] [1] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 10:27:43.158] [micropagosdatabase] [database] [info] [1] the query in the database tooks: 217.6544ms
+[2024-06-19 10:27:43.159] [micropagosdatabase] [middleware] [info] [1] Request took 219.6881ms
+[2024-06-19 10:27:46.438] [micropagosdatabase] [middleware] [info] [1] New petition received
+[2024-06-19 10:27:46.440] [micropagosdatabase] [middleware] [trace] [1] url: /masks/1, method: GET
+[2024-06-19 10:27:46.440] [micropagosdatabase] [handler] [info] [1] starting to get the maskpatterns
+[2024-06-19 10:27:46.440] [micropagosdatabase] [database] [trace] [1] starting to get the mask patters
+[2024-06-19 10:27:46.440] [micropagosdatabase] [database] [trace] [1] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 10:27:46.657] [micropagosdatabase] [database] [info] [1] the query in the database tooks: 217.1643ms
+[2024-06-19 10:27:46.657] [micropagosdatabase] [middleware] [info] [1] Request took 219.1544ms
+[2024-06-19 10:27:48.505] [micropagosdatabase] [middleware] [info] [1] New petition received
+[2024-06-19 10:27:48.505] [micropagosdatabase] [middleware] [trace] [1] url: /usersInfo/1, method: GET
+[2024-06-19 10:27:48.506] [micropagosdatabase] [handler] [info] [1] starting to get users info
+[2024-06-19 10:27:48.506] [micropagosdatabase] [database] [trace] [1] starting to get the users information
+[2024-06-19 10:27:48.506] [micropagosdatabase] [database] [trace] [1] this is the QUERY: SELECT u.id, u.username, u.password, u.lastlogin, d.name FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 10:27:48.794] [micropagosdatabase] [database] [info] [1] the query in the database tooks: 288.2328ms
+[2024-06-19 10:27:48.795] [micropagosdatabase] [middleware] [info] [1] Request took 289.8959ms
+[2024-06-19 10:27:54.736] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-06-19 10:27:54.736] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-06-19 10:27:54.736] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-06-19 10:27:54.736] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-06-19 10:27:54.736] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-06-19 10:27:55.168] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 431.4467ms
+[2024-06-19 10:27:55.168] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-06-19 10:27:55.168] [micropagosdatabase] [middleware] [info] [1111] Request took 431.9759ms

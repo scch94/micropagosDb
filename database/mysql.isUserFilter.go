@@ -50,7 +50,7 @@ func IsUserFilter(r request.IsUserFilter, ctx context.Context) (*modeldb.IsUserF
 			&filterModel.MobileNumber,
 			&filterModel.ShortNumber,
 		)
-		cancel()
+		defer cancel()
 		if err == nil || err == sql.ErrNoRows {
 			// Consulta exitosa, salir del bucle
 			break

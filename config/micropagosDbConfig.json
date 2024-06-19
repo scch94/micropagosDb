@@ -1,9 +1,9 @@
 {
     "serverPort": ":2122",
     "log_level": "trace",
-    "log_name":"micropagosdatabasegateway_",
+    "log_name": "micropagosdatabasegateway_",
     "queryRetryCount": 3,
-    "dbQueryTimeout": 2500,
+    "dbQueryTimeout": 12000,
     "mysqlConnection": {
         "raven": {
             "connectionString": "raven:micropagos@tcp(192.168.27.38:3306)/raven",

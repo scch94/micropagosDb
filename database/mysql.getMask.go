@@ -36,7 +36,7 @@ func GetMask(ctx context.Context) ([]modeldb.Mask, error) {
 		// Realizar la consulta
 		db := GetDBMessage()
 		rows, err = db.QueryContext(queryCtx, mySQLGetMask)
-		cancel()
+		defer cancel()
 		if err == nil {
 			// Consulta exitosa, salir del bucle
 			break

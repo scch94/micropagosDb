@@ -28,6 +28,7 @@ func SetupRouter(ctx context.Context) *gin.Engine {
 	router.GET("/filter/:mobile/:shortNumber/:utfi", h.IsUserFilter)
 	router.GET("/masks/:utfi", h.GetMaskPatterns)
 	router.GET("/userdomain/:username/:utfi", h.GetUserDomain)
+	router.GET("/usersInfo/:utfi", h.GetUsersInfo)
 	router.NoRoute(notFoundHandler)
 
 	return router
