@@ -1,0 +1,6 @@
+[2024-06-07 10:51:40.505] [Gconfiguration] [] [info] [] ending to get the configuration
+[2024-06-07 10:51:40.505] [Gconfiguration] [] [trace] [] this is the data that we have in the configuration {"serverPort":":2122","log_level":"trace","queryRetryCount":3,"dbQueryTimeout":2500,"mysqlConnection":{"raven":{"connectionString":"raven:micropagos@tcp(192.168.27.38:3306)/raven","maxOpenConns":200,"maxIdleConns":20,"conMaxLifeTime":1800,"conMaxIdleTime":0},"weaver":{"connectionString":"weaver:micropagos@tcp(192.168.27.38:3306)/weaver","maxOpenConns":200,"maxIdleConns":20,"conMaxLifeTime":1800,"conMaxIdleTime":0}},"myPostgresConnection":{"raven":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0},"weaver":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0}}}
+[2024-06-07 10:51:40.506] [micropagosdatabase] [main] [info] [] startig micropagos database module version : 1.0.0
+[2024-06-07 10:51:51.249] [micropagosdatabase] [database] [info] [] conected to the mysql message database
+[2024-06-07 10:52:01.930] [micropagosdatabase] [database] [info] [] conected to the mysql user database
+[2024-06-07 10:52:01.931] [micropagosdatabase] [server] [info] [] Starting server on address: :2122

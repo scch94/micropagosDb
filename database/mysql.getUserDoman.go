@@ -33,12 +33,11 @@ func GetUserDomain(r request.GetUserDomain, ctx context.Context) (*modeldb.UserD
 	for i := 0; i < config.Config.QueryRetryCount; i++ {
 
 		queryCtx, cancel := context.WithTimeout(ctx, time.Duration(config.Config.DbQueryTimeout)*time.Millisecond)
-		defer cancel()
 
 		// Realizar la consulta
 		db := GetDBUsers()
 		err = db.QueryRowContext(queryCtx, mySQLGetDomain, r.UserName).Scan(&domainModel.Domainname, &domainModel.Username, &domainModel.Password)
-
+		cancel()
 		if err == nil {
 			// Consulta exitosa, salir del bucle
 			break

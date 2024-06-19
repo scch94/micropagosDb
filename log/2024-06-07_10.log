@@ -1,0 +1,103 @@
+[2024-06-07 10:52:48.614] [Gconfiguration] [] [info] [] ending to get the configuration
+[2024-06-07 10:52:48.614] [Gconfiguration] [] [trace] [] this is the data that we have in the configuration {"serverPort":":2122","log_level":"trace","log_name":"micropagosdatabasegateway_","queryRetryCount":3,"dbQueryTimeout":2500,"mysqlConnection":{"raven":{"connectionString":"raven:micropagos@tcp(192.168.27.38:3306)/raven","maxOpenConns":200,"maxIdleConns":20,"conMaxLifeTime":1800,"conMaxIdleTime":0},"weaver":{"connectionString":"weaver:micropagos@tcp(192.168.27.38:3306)/weaver","maxOpenConns":200,"maxIdleConns":20,"conMaxLifeTime":1800,"conMaxIdleTime":0}},"myPostgresConnection":{"raven":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0},"weaver":{"connectionString":"","maxOpenConns":0,"maxIdleConns":0,"conMaxLifeTime":0,"conMaxIdleTime":0}}}
+[2024-06-07 10:52:48.615] [micropagosdatabase] [main] [info] [] startig micropagos database module version : 1.0.0
+[2024-06-07 10:52:59.351] [micropagosdatabase] [database] [info] [] conected to the mysql message database
+[2024-06-07 10:53:10.276] [micropagosdatabase] [database] [info] [] conected to the mysql user database
+[2024-06-07 10:53:10.276] [micropagosdatabase] [server] [info] [] Starting server on Port: :2122
+[2024-06-07 10:53:19.756] [micropagosdatabase] [middleware] [info] [f7f444e458d6] New petition received
+[2024-06-07 10:53:19.756] [micropagosdatabase] [middleware] [trace] [f7f444e458d6] url: /, method: GET
+[2024-06-07 10:53:19.756] [micropagosdatabase] [handler] [info] [f7f444e458d6] starting handler welcome
+[2024-06-07 10:53:19.756] [micropagosdatabase] [middleware] [info] [f7f444e458d6] Request took 0s
+[2024-06-07 10:53:20.718] [micropagosdatabase] [middleware] [info] [ef2a168ced2e] New petition received
+[2024-06-07 10:53:20.718] [micropagosdatabase] [middleware] [trace] [ef2a168ced2e] url: /, method: GET
+[2024-06-07 10:53:20.718] [micropagosdatabase] [handler] [info] [ef2a168ced2e] starting handler welcome
+[2024-06-07 10:53:20.718] [micropagosdatabase] [middleware] [info] [ef2a168ced2e] Request took 505.4µs
+[2024-06-07 10:53:21.480] [micropagosdatabase] [middleware] [info] [a9b319560762] New petition received
+[2024-06-07 10:53:21.480] [micropagosdatabase] [middleware] [trace] [a9b319560762] url: /, method: GET
+[2024-06-07 10:53:21.480] [micropagosdatabase] [handler] [info] [a9b319560762] starting handler welcome
+[2024-06-07 10:53:21.480] [micropagosdatabase] [middleware] [info] [a9b319560762] Request took 506.8µs
+[2024-06-07 10:53:23.521] [micropagosdatabase] [middleware] [info] [477ee5f17d3d] New petition received
+[2024-06-07 10:53:23.522] [micropagosdatabase] [middleware] [trace] [477ee5f17d3d] url: /masks/477ee5f17d3d, method: GET
+[2024-06-07 10:53:23.522] [micropagosdatabase] [handler] [info] [477ee5f17d3d] starting to get the maskpatterns
+[2024-06-07 10:53:23.522] [micropagosdatabase] [database] [trace] [477ee5f17d3d] starting to get the mask patters
+[2024-06-07 10:53:23.522] [micropagosdatabase] [database] [trace] [477ee5f17d3d] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-07 10:53:23.654] [micropagosdatabase] [middleware] [info] [076697cfd963] New petition received
+[2024-06-07 10:53:23.654] [micropagosdatabase] [middleware] [trace] [076697cfd963] url: /masks/076697cfd963, method: GET
+[2024-06-07 10:53:23.654] [micropagosdatabase] [handler] [info] [076697cfd963] starting to get the maskpatterns
+[2024-06-07 10:53:23.654] [micropagosdatabase] [database] [trace] [076697cfd963] starting to get the mask patters
+[2024-06-07 10:53:23.654] [micropagosdatabase] [database] [trace] [076697cfd963] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-07 10:53:23.735] [micropagosdatabase] [database] [info] [477ee5f17d3d] the query in the database tooks: 213.5499ms
+[2024-06-07 10:53:23.735] [micropagosdatabase] [middleware] [info] [477ee5f17d3d] Request took 214.3277ms
+[2024-06-07 10:53:27.842] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-06-07 10:53:27.842] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-06-07 10:53:27.842] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-06-07 10:53:27.842] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-06-07 10:53:27.842] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-06-07 10:53:28.287] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 445.0912ms
+[2024-06-07 10:53:28.287] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-06-07 10:53:28.287] [micropagosdatabase] [middleware] [info] [1111] Request took 445.5969ms
+[2024-06-07 10:53:29.458] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-06-07 10:53:29.458] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-06-07 10:53:29.459] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-06-07 10:53:29.459] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-06-07 10:53:29.459] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-06-07 10:53:29.880] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 420.8859ms
+[2024-06-07 10:53:29.880] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-06-07 10:53:29.880] [micropagosdatabase] [middleware] [info] [1111] Request took 421.3927ms
+[2024-06-07 10:53:30.589] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-06-07 10:53:30.589] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-06-07 10:53:30.590] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-06-07 10:53:30.590] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-06-07 10:53:30.590] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-06-07 10:53:31.017] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 427.6548ms
+[2024-06-07 10:53:31.017] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-06-07 10:53:31.018] [micropagosdatabase] [middleware] [info] [1111] Request took 428.6676ms
+[2024-06-07 10:53:31.434] [micropagosdatabase] [middleware] [info] [1111] New petition received
+[2024-06-07 10:53:31.434] [micropagosdatabase] [middleware] [trace] [1111] url: /userdomain/eaguerre/1111, method: GET
+[2024-06-07 10:53:31.434] [micropagosdatabase] [handler] [info] [1111] starting to get the domain for the user eaguerre
+[2024-06-07 10:53:31.435] [micropagosdatabase] [database] [trace] [1111] starting to get the domain for the user :eaguerre
+[2024-06-07 10:53:31.435] [micropagosdatabase] [database] [trace] [1111] this is the QUERY: SELECT d.name, u.username, u.password FROM user u JOIN domain d ON u.domain_id = d.id where u.username=? and the params: Username=eaguerre,
+[2024-06-07 10:53:31.857] [micropagosdatabase] [database] [info] [1111] the query in the database tooks: 422.2536ms
+[2024-06-07 10:53:31.857] [micropagosdatabase] [database] [info] [1111] and this is the domain: Micropagos
+[2024-06-07 10:53:31.857] [micropagosdatabase] [middleware] [info] [1111] Request took 422.7596ms
+[2024-06-07 10:53:34.322] [micropagosdatabase] [database] [info] [076697cfd963] the query in the database tooks: 10.6683651s
+[2024-06-07 10:53:34.323] [micropagosdatabase] [middleware] [info] [076697cfd963] Request took 10.6691214s
+[2024-06-07 10:53:50.776] [micropagosdatabase] [middleware] [info] [2] New petition received
+[2024-06-07 10:53:50.776] [micropagosdatabase] [middleware] [trace] [2] url: /filter/94326996/11789/2, method: GET
+[2024-06-07 10:53:50.777] [micropagosdatabase] [handler] [info] [2] starting to check if the shortnumber 11789 with the mobile 94326996 are filter
+[2024-06-07 10:53:50.777] [micropagosdatabase] [database] [trace] [2] Checking if the combination of destination and origin mobile numbers is not filtered.
+[2024-06-07 10:53:50.777] [micropagosdatabase] [database] [trace] [2] this is the QUERY: SELECT id, added, comment, mobile_countryisocode, mobile_number, shortnumber FROM filter WHERE mobile_number = ? AND shortnumber = ? AND userremoved IS NULL AND (direction IS NULL OR direction = 'OUT') and the params: mobile_number=94326996, shortnumber=11789
+[2024-06-07 10:53:51.212] [micropagosdatabase] [database] [info] [2] the combination of destination and origin mobile numbers is not filter
+[2024-06-07 10:53:51.212] [micropagosdatabase] [database] [info] [2] the query in the database tooks: 434.9587ms
+[2024-06-07 10:53:51.212] [micropagosdatabase] [database] [trace] [2] and this is the information of the database: {          false}
+[2024-06-07 10:53:51.212] [micropagosdatabase] [middleware] [info] [2] Request took 436.0616ms
+[2024-06-07 10:55:23.532] [micropagosdatabase] [middleware] [info] [ffb478d70676] New petition received
+[2024-06-07 10:55:23.532] [micropagosdatabase] [middleware] [trace] [ffb478d70676] url: /masks/ffb478d70676, method: GET
+[2024-06-07 10:55:23.532] [micropagosdatabase] [handler] [info] [ffb478d70676] starting to get the maskpatterns
+[2024-06-07 10:55:23.532] [micropagosdatabase] [database] [trace] [ffb478d70676] starting to get the mask patters
+[2024-06-07 10:55:23.532] [micropagosdatabase] [database] [trace] [ffb478d70676] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-07 10:55:23.743] [micropagosdatabase] [database] [info] [ffb478d70676] the query in the database tooks: 210.947ms
+[2024-06-07 10:55:23.743] [micropagosdatabase] [middleware] [info] [ffb478d70676] Request took 211.7819ms
+[2024-06-07 10:57:23.526] [micropagosdatabase] [middleware] [info] [6ba71fe71a4e] New petition received
+[2024-06-07 10:57:23.526] [micropagosdatabase] [middleware] [trace] [6ba71fe71a4e] url: /masks/6ba71fe71a4e, method: GET
+[2024-06-07 10:57:23.526] [micropagosdatabase] [handler] [info] [6ba71fe71a4e] starting to get the maskpatterns
+[2024-06-07 10:57:23.526] [micropagosdatabase] [database] [trace] [6ba71fe71a4e] starting to get the mask patters
+[2024-06-07 10:57:23.526] [micropagosdatabase] [database] [trace] [6ba71fe71a4e] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-07 10:57:23.799] [micropagosdatabase] [database] [info] [6ba71fe71a4e] the query in the database tooks: 273.8075ms
+[2024-06-07 10:57:23.800] [micropagosdatabase] [middleware] [info] [6ba71fe71a4e] Request took 274.3323ms
+[2024-06-07 10:58:23.369] [micropagosdatabase] [middleware] [info] [2] New petition received
+[2024-06-07 10:58:23.370] [micropagosdatabase] [middleware] [trace] [2] url: /filter/94326996/11789/2, method: GET
+[2024-06-07 10:58:23.370] [micropagosdatabase] [handler] [info] [2] starting to check if the shortnumber 11789 with the mobile 94326996 are filter
+[2024-06-07 10:58:23.370] [micropagosdatabase] [database] [trace] [2] Checking if the combination of destination and origin mobile numbers is not filtered.
+[2024-06-07 10:58:23.370] [micropagosdatabase] [database] [trace] [2] this is the QUERY: SELECT id, added, comment, mobile_countryisocode, mobile_number, shortnumber FROM filter WHERE mobile_number = ? AND shortnumber = ? AND userremoved IS NULL AND (direction IS NULL OR direction = 'OUT') and the params: mobile_number=94326996, shortnumber=11789
+[2024-06-07 10:58:23.774] [micropagosdatabase] [database] [info] [2] the combination of destination and origin mobile numbers is not filter
+[2024-06-07 10:58:23.774] [micropagosdatabase] [database] [info] [2] the query in the database tooks: 404.1809ms
+[2024-06-07 10:58:23.774] [micropagosdatabase] [database] [trace] [2] and this is the information of the database: {          false}
+[2024-06-07 10:58:23.774] [micropagosdatabase] [middleware] [info] [2] Request took 405.1912ms
+[2024-06-07 10:59:23.537] [micropagosdatabase] [middleware] [info] [9a08975c0a86] New petition received
+[2024-06-07 10:59:23.537] [micropagosdatabase] [middleware] [trace] [9a08975c0a86] url: /masks/9a08975c0a86, method: GET
+[2024-06-07 10:59:23.537] [micropagosdatabase] [handler] [info] [9a08975c0a86] starting to get the maskpatterns
+[2024-06-07 10:59:23.537] [micropagosdatabase] [database] [trace] [9a08975c0a86] starting to get the mask patters
+[2024-06-07 10:59:23.537] [micropagosdatabase] [database] [trace] [9a08975c0a86] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-07 10:59:23.748] [micropagosdatabase] [database] [info] [9a08975c0a86] the query in the database tooks: 210.6739ms
+[2024-06-07 10:59:23.749] [micropagosdatabase] [middleware] [info] [9a08975c0a86] Request took 212.0072ms

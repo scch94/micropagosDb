@@ -39,7 +39,6 @@ func IsUserFilter(r request.IsUserFilter, ctx context.Context) (*modeldb.IsUserF
 	for i := 0; i < config.Config.QueryRetryCount; i++ {
 
 		queryCtx, cancel := context.WithTimeout(ctx, time.Duration(config.Config.DbQueryTimeout)*time.Millisecond)
-		defer cancel()
 
 		//realizamos la consula
 		db := GetDBMessage()
@@ -51,7 +50,7 @@ func IsUserFilter(r request.IsUserFilter, ctx context.Context) (*modeldb.IsUserF
 			&filterModel.MobileNumber,
 			&filterModel.ShortNumber,
 		)
-
+		cancel()
 		if err == nil || err == sql.ErrNoRows {
 			// Consulta exitosa, salir del bucle
 			break

@@ -8,16 +8,16 @@
         "raven": {
             "connectionString": "raven:micropagos@tcp(192.168.27.38:3306)/raven",
             "maxOpenConns": 200,
-            "maxIdleConns": 20,
-            "conMaxLifeTime": 1800,
-            "connMaxIdleTime": 1500
+            "maxIdleConns": 50,
+            "conMaxLifeTime": 3600,
+            "connMaxIdleTime": 1800
         },
         "weaver": {
             "connectionString": "weaver:micropagos@tcp(192.168.27.38:3306)/weaver",
             "maxOpenConns": 200,
-            "maxIdleConns": 20,
-            "conMaxLifeTime": 1800,
-            "connMaxIdleTime": 1500
+            "maxIdleConns": 50,
+            "conMaxLifeTime": 3600,
+            "connMaxIdleTime": 1800
         }
     },
     "myPostgresConnection": {

@@ -32,12 +32,11 @@ func GetMask(ctx context.Context) ([]modeldb.Mask, error) {
 	for i := 0; i < config.Config.QueryRetryCount; i++ {
 
 		queryCtx, cancel := context.WithCancel(ctx)
-		defer cancel()
 
 		// Realizar la consulta
 		db := GetDBMessage()
 		rows, err = db.QueryContext(queryCtx, mySQLGetMask)
-
+		cancel()
 		if err == nil {
 			// Consulta exitosa, salir del bucle
 			break
@@ -45,6 +44,7 @@ func GetMask(ctx context.Context) ([]modeldb.Mask, error) {
 
 		// Si hay un error, registrar el intento
 		ins_log.Tracef(ctx, "getUserDomain error on attempt %d: %v", i+1, err)
+
 	}
 	if err != nil {
 		ins_log.Errorf(ctx, "query error %v", err)
