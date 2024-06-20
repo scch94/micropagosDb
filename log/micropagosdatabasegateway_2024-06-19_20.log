@@ -1,0 +1,224 @@
+[2024-06-19 20:00:08.935] [micropagosdatabase] [middleware] [info] [3b0303ab684c] New petition received
+[2024-06-19 20:00:08.935] [micropagosdatabase] [middleware] [trace] [3b0303ab684c] url: /masks/3b0303ab684c, method: GET
+[2024-06-19 20:00:08.935] [micropagosdatabase] [handler] [info] [3b0303ab684c] starting to get the maskpatterns
+[2024-06-19 20:00:08.935] [micropagosdatabase] [database] [trace] [3b0303ab684c] starting to get the mask patters
+[2024-06-19 20:00:08.936] [micropagosdatabase] [database] [trace] [3b0303ab684c] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 20:00:09.143] [micropagosdatabase] [database] [info] [3b0303ab684c] the query in the database tooks: 207.3384ms
+[2024-06-19 20:00:09.143] [micropagosdatabase] [middleware] [info] [3b0303ab684c] Request took 208.4134ms
+[2024-06-19 20:00:09.147] [micropagosdatabase] [middleware] [info] [7dac040d0e2c] New petition received
+[2024-06-19 20:00:09.147] [micropagosdatabase] [middleware] [trace] [7dac040d0e2c] url: /usersInfo/7dac040d0e2c, method: GET
+[2024-06-19 20:00:09.147] [micropagosdatabase] [handler] [info] [7dac040d0e2c] starting to get users info
+[2024-06-19 20:00:09.148] [micropagosdatabase] [database] [trace] [7dac040d0e2c] starting to get the users information
+[2024-06-19 20:00:09.148] [micropagosdatabase] [database] [trace] [7dac040d0e2c] this is the QUERY: SELECT u.id, u.username, u.password, u.lastlogin, d.name FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 20:00:09.420] [micropagosdatabase] [database] [info] [7dac040d0e2c] the query in the database tooks: 272.399ms
+[2024-06-19 20:00:09.420] [micropagosdatabase] [middleware] [info] [7dac040d0e2c] Request took 273.3256ms
+[2024-06-19 20:02:08.945] [micropagosdatabase] [middleware] [info] [ed132282785c] New petition received
+[2024-06-19 20:02:08.945] [micropagosdatabase] [middleware] [trace] [ed132282785c] url: /masks/ed132282785c, method: GET
+[2024-06-19 20:02:08.946] [micropagosdatabase] [handler] [info] [ed132282785c] starting to get the maskpatterns
+[2024-06-19 20:02:08.946] [micropagosdatabase] [database] [trace] [ed132282785c] starting to get the mask patters
+[2024-06-19 20:02:08.946] [micropagosdatabase] [database] [trace] [ed132282785c] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 20:02:09.160] [micropagosdatabase] [database] [info] [ed132282785c] the query in the database tooks: 213.9043ms
+[2024-06-19 20:02:09.160] [micropagosdatabase] [middleware] [info] [ed132282785c] Request took 214.7147ms
+[2024-06-19 20:02:09.163] [micropagosdatabase] [middleware] [info] [b3888d06eafd] New petition received
+[2024-06-19 20:02:09.163] [micropagosdatabase] [middleware] [trace] [b3888d06eafd] url: /usersInfo/b3888d06eafd, method: GET
+[2024-06-19 20:02:09.163] [micropagosdatabase] [handler] [info] [b3888d06eafd] starting to get users info
+[2024-06-19 20:02:09.163] [micropagosdatabase] [database] [trace] [b3888d06eafd] starting to get the users information
+[2024-06-19 20:02:09.163] [micropagosdatabase] [database] [trace] [b3888d06eafd] this is the QUERY: SELECT u.id, u.username, u.password, u.lastlogin, d.name FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 20:02:09.440] [micropagosdatabase] [database] [info] [b3888d06eafd] the query in the database tooks: 277.2639ms
+[2024-06-19 20:02:09.441] [micropagosdatabase] [middleware] [info] [b3888d06eafd] Request took 277.9286ms
+[2024-06-19 20:04:08.945] [micropagosdatabase] [middleware] [info] [4163528f5afe] New petition received
+[2024-06-19 20:04:08.945] [micropagosdatabase] [middleware] [trace] [4163528f5afe] url: /masks/4163528f5afe, method: GET
+[2024-06-19 20:04:08.945] [micropagosdatabase] [handler] [info] [4163528f5afe] starting to get the maskpatterns
+[2024-06-19 20:04:08.945] [micropagosdatabase] [database] [trace] [4163528f5afe] starting to get the mask patters
+[2024-06-19 20:04:08.945] [micropagosdatabase] [database] [trace] [4163528f5afe] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 20:04:09.153] [micropagosdatabase] [database] [info] [4163528f5afe] the query in the database tooks: 207.7427ms
+[2024-06-19 20:04:09.153] [micropagosdatabase] [middleware] [info] [4163528f5afe] Request took 208.705ms
+[2024-06-19 20:04:09.156] [micropagosdatabase] [middleware] [info] [9dd5cbfff9a6] New petition received
+[2024-06-19 20:04:09.156] [micropagosdatabase] [middleware] [trace] [9dd5cbfff9a6] url: /usersInfo/9dd5cbfff9a6, method: GET
+[2024-06-19 20:04:09.156] [micropagosdatabase] [handler] [info] [9dd5cbfff9a6] starting to get users info
+[2024-06-19 20:04:09.156] [micropagosdatabase] [database] [trace] [9dd5cbfff9a6] starting to get the users information
+[2024-06-19 20:04:09.156] [micropagosdatabase] [database] [trace] [9dd5cbfff9a6] this is the QUERY: SELECT u.id, u.username, u.password, u.lastlogin, d.name FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 20:04:09.421] [micropagosdatabase] [database] [info] [9dd5cbfff9a6] the query in the database tooks: 264.4169ms
+[2024-06-19 20:04:09.422] [micropagosdatabase] [middleware] [info] [9dd5cbfff9a6] Request took 265.5422ms
+[2024-06-19 20:06:08.932] [micropagosdatabase] [middleware] [info] [17fab08dce70] New petition received
+[2024-06-19 20:06:08.932] [micropagosdatabase] [middleware] [trace] [17fab08dce70] url: /masks/17fab08dce70, method: GET
+[2024-06-19 20:06:08.933] [micropagosdatabase] [handler] [info] [17fab08dce70] starting to get the maskpatterns
+[2024-06-19 20:06:08.933] [micropagosdatabase] [database] [trace] [17fab08dce70] starting to get the mask patters
+[2024-06-19 20:06:08.933] [micropagosdatabase] [database] [trace] [17fab08dce70] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 20:06:09.161] [micropagosdatabase] [database] [info] [17fab08dce70] the query in the database tooks: 228.4561ms
+[2024-06-19 20:06:09.162] [micropagosdatabase] [middleware] [info] [17fab08dce70] Request took 229.4222ms
+[2024-06-19 20:06:09.164] [micropagosdatabase] [middleware] [info] [a4080a23c285] New petition received
+[2024-06-19 20:06:09.164] [micropagosdatabase] [middleware] [trace] [a4080a23c285] url: /usersInfo/a4080a23c285, method: GET
+[2024-06-19 20:06:09.165] [micropagosdatabase] [handler] [info] [a4080a23c285] starting to get users info
+[2024-06-19 20:06:09.165] [micropagosdatabase] [database] [trace] [a4080a23c285] starting to get the users information
+[2024-06-19 20:06:09.165] [micropagosdatabase] [database] [trace] [a4080a23c285] this is the QUERY: SELECT u.id, u.username, u.password, u.lastlogin, d.name FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 20:06:09.385] [micropagosdatabase] [database] [info] [a4080a23c285] the query in the database tooks: 219.8323ms
+[2024-06-19 20:06:09.385] [micropagosdatabase] [middleware] [info] [a4080a23c285] Request took 220.771ms
+[2024-06-19 20:08:08.942] [micropagosdatabase] [middleware] [info] [e9342bd6a831] New petition received
+[2024-06-19 20:08:08.943] [micropagosdatabase] [middleware] [trace] [e9342bd6a831] url: /masks/e9342bd6a831, method: GET
+[2024-06-19 20:08:08.943] [micropagosdatabase] [handler] [info] [e9342bd6a831] starting to get the maskpatterns
+[2024-06-19 20:08:08.943] [micropagosdatabase] [database] [trace] [e9342bd6a831] starting to get the mask patters
+[2024-06-19 20:08:08.943] [micropagosdatabase] [database] [trace] [e9342bd6a831] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 20:08:09.167] [micropagosdatabase] [database] [info] [e9342bd6a831] the query in the database tooks: 224.171ms
+[2024-06-19 20:08:09.167] [micropagosdatabase] [middleware] [info] [e9342bd6a831] Request took 225.3227ms
+[2024-06-19 20:08:09.170] [micropagosdatabase] [middleware] [info] [e62d11f69fcb] New petition received
+[2024-06-19 20:08:09.170] [micropagosdatabase] [middleware] [trace] [e62d11f69fcb] url: /usersInfo/e62d11f69fcb, method: GET
+[2024-06-19 20:08:09.170] [micropagosdatabase] [handler] [info] [e62d11f69fcb] starting to get users info
+[2024-06-19 20:08:09.170] [micropagosdatabase] [database] [trace] [e62d11f69fcb] starting to get the users information
+[2024-06-19 20:08:09.171] [micropagosdatabase] [database] [trace] [e62d11f69fcb] this is the QUERY: SELECT u.id, u.username, u.password, u.lastlogin, d.name FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 20:08:09.433] [micropagosdatabase] [database] [info] [e62d11f69fcb] the query in the database tooks: 261.9748ms
+[2024-06-19 20:08:09.433] [micropagosdatabase] [middleware] [info] [e62d11f69fcb] Request took 262.9304ms
+[2024-06-19 20:10:08.932] [micropagosdatabase] [middleware] [info] [a61f88f6099a] New petition received
+[2024-06-19 20:10:08.932] [micropagosdatabase] [middleware] [trace] [a61f88f6099a] url: /masks/a61f88f6099a, method: GET
+[2024-06-19 20:10:08.932] [micropagosdatabase] [handler] [info] [a61f88f6099a] starting to get the maskpatterns
+[2024-06-19 20:10:08.932] [micropagosdatabase] [database] [trace] [a61f88f6099a] starting to get the mask patters
+[2024-06-19 20:10:08.932] [micropagosdatabase] [database] [trace] [a61f88f6099a] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 20:10:09.137] [micropagosdatabase] [database] [info] [a61f88f6099a] the query in the database tooks: 204.2678ms
+[2024-06-19 20:10:09.138] [micropagosdatabase] [middleware] [info] [a61f88f6099a] Request took 205.8163ms
+[2024-06-19 20:10:09.141] [micropagosdatabase] [middleware] [info] [b2656f8bebba] New petition received
+[2024-06-19 20:10:09.141] [micropagosdatabase] [middleware] [trace] [b2656f8bebba] url: /usersInfo/b2656f8bebba, method: GET
+[2024-06-19 20:10:09.141] [micropagosdatabase] [handler] [info] [b2656f8bebba] starting to get users info
+[2024-06-19 20:10:09.141] [micropagosdatabase] [database] [trace] [b2656f8bebba] starting to get the users information
+[2024-06-19 20:10:09.141] [micropagosdatabase] [database] [trace] [b2656f8bebba] this is the QUERY: SELECT u.id, u.username, u.password, u.lastlogin, d.name FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 20:10:09.400] [micropagosdatabase] [database] [info] [b2656f8bebba] the query in the database tooks: 259.4017ms
+[2024-06-19 20:10:09.401] [micropagosdatabase] [middleware] [info] [b2656f8bebba] Request took 260.3113ms
+[2024-06-19 20:12:08.973] [micropagosdatabase] [middleware] [info] [19168cbd8c54] New petition received
+[2024-06-19 20:12:08.974] [micropagosdatabase] [middleware] [trace] [19168cbd8c54] url: /masks/19168cbd8c54, method: GET
+[2024-06-19 20:12:08.974] [micropagosdatabase] [handler] [info] [19168cbd8c54] starting to get the maskpatterns
+[2024-06-19 20:12:08.974] [micropagosdatabase] [database] [trace] [19168cbd8c54] starting to get the mask patters
+[2024-06-19 20:12:08.974] [micropagosdatabase] [database] [trace] [19168cbd8c54] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 20:12:09.194] [micropagosdatabase] [database] [info] [19168cbd8c54] the query in the database tooks: 219.9619ms
+[2024-06-19 20:12:09.194] [micropagosdatabase] [middleware] [info] [19168cbd8c54] Request took 221.0643ms
+[2024-06-19 20:12:09.200] [micropagosdatabase] [middleware] [info] [07ba424d909c] New petition received
+[2024-06-19 20:12:09.200] [micropagosdatabase] [middleware] [trace] [07ba424d909c] url: /usersInfo/07ba424d909c, method: GET
+[2024-06-19 20:12:09.200] [micropagosdatabase] [handler] [info] [07ba424d909c] starting to get users info
+[2024-06-19 20:12:09.201] [micropagosdatabase] [database] [trace] [07ba424d909c] starting to get the users information
+[2024-06-19 20:12:09.201] [micropagosdatabase] [database] [trace] [07ba424d909c] this is the QUERY: SELECT u.id, u.username, u.password, u.lastlogin, d.name FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 20:12:09.484] [micropagosdatabase] [database] [info] [07ba424d909c] the query in the database tooks: 282.4463ms
+[2024-06-19 20:12:09.484] [micropagosdatabase] [middleware] [info] [07ba424d909c] Request took 284.7842ms
+[2024-06-19 20:14:08.936] [micropagosdatabase] [middleware] [info] [d4bf6228846c] New petition received
+[2024-06-19 20:14:08.936] [micropagosdatabase] [middleware] [trace] [d4bf6228846c] url: /masks/d4bf6228846c, method: GET
+[2024-06-19 20:14:08.936] [micropagosdatabase] [handler] [info] [d4bf6228846c] starting to get the maskpatterns
+[2024-06-19 20:14:08.936] [micropagosdatabase] [database] [trace] [d4bf6228846c] starting to get the mask patters
+[2024-06-19 20:14:08.937] [micropagosdatabase] [database] [trace] [d4bf6228846c] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 20:14:09.155] [micropagosdatabase] [database] [info] [d4bf6228846c] the query in the database tooks: 218.4758ms
+[2024-06-19 20:14:09.156] [micropagosdatabase] [middleware] [info] [d4bf6228846c] Request took 219.4477ms
+[2024-06-19 20:14:09.158] [micropagosdatabase] [middleware] [info] [8fecad7351d7] New petition received
+[2024-06-19 20:14:09.159] [micropagosdatabase] [middleware] [trace] [8fecad7351d7] url: /usersInfo/8fecad7351d7, method: GET
+[2024-06-19 20:14:09.159] [micropagosdatabase] [handler] [info] [8fecad7351d7] starting to get users info
+[2024-06-19 20:14:09.159] [micropagosdatabase] [database] [trace] [8fecad7351d7] starting to get the users information
+[2024-06-19 20:14:09.159] [micropagosdatabase] [database] [trace] [8fecad7351d7] this is the QUERY: SELECT u.id, u.username, u.password, u.lastlogin, d.name FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 20:14:09.428] [micropagosdatabase] [database] [info] [8fecad7351d7] the query in the database tooks: 268.8408ms
+[2024-06-19 20:14:09.428] [micropagosdatabase] [middleware] [info] [8fecad7351d7] Request took 269.8029ms
+[2024-06-19 20:16:08.931] [micropagosdatabase] [middleware] [info] [c68353fed50c] New petition received
+[2024-06-19 20:16:08.931] [micropagosdatabase] [middleware] [trace] [c68353fed50c] url: /masks/c68353fed50c, method: GET
+[2024-06-19 20:16:08.931] [micropagosdatabase] [handler] [info] [c68353fed50c] starting to get the maskpatterns
+[2024-06-19 20:16:08.931] [micropagosdatabase] [database] [trace] [c68353fed50c] starting to get the mask patters
+[2024-06-19 20:16:08.931] [micropagosdatabase] [database] [trace] [c68353fed50c] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 20:16:09.136] [micropagosdatabase] [database] [info] [c68353fed50c] the query in the database tooks: 204.794ms
+[2024-06-19 20:16:09.137] [micropagosdatabase] [middleware] [info] [c68353fed50c] Request took 205.5997ms
+[2024-06-19 20:16:09.140] [micropagosdatabase] [middleware] [info] [93fb89aee3fb] New petition received
+[2024-06-19 20:16:09.140] [micropagosdatabase] [middleware] [trace] [93fb89aee3fb] url: /usersInfo/93fb89aee3fb, method: GET
+[2024-06-19 20:16:09.140] [micropagosdatabase] [handler] [info] [93fb89aee3fb] starting to get users info
+[2024-06-19 20:16:09.140] [micropagosdatabase] [database] [trace] [93fb89aee3fb] starting to get the users information
+[2024-06-19 20:16:09.140] [micropagosdatabase] [database] [trace] [93fb89aee3fb] this is the QUERY: SELECT u.id, u.username, u.password, u.lastlogin, d.name FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 20:16:09.404] [micropagosdatabase] [database] [info] [93fb89aee3fb] the query in the database tooks: 263.8222ms
+[2024-06-19 20:16:09.404] [micropagosdatabase] [middleware] [info] [93fb89aee3fb] Request took 264.6344ms
+[2024-06-19 20:18:08.939] [micropagosdatabase] [middleware] [info] [86e4a7f6d2f5] New petition received
+[2024-06-19 20:18:08.940] [micropagosdatabase] [middleware] [trace] [86e4a7f6d2f5] url: /masks/86e4a7f6d2f5, method: GET
+[2024-06-19 20:18:08.940] [micropagosdatabase] [handler] [info] [86e4a7f6d2f5] starting to get the maskpatterns
+[2024-06-19 20:18:08.940] [micropagosdatabase] [database] [trace] [86e4a7f6d2f5] starting to get the mask patters
+[2024-06-19 20:18:08.940] [micropagosdatabase] [database] [trace] [86e4a7f6d2f5] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 20:18:09.151] [micropagosdatabase] [database] [info] [86e4a7f6d2f5] the query in the database tooks: 211.2951ms
+[2024-06-19 20:18:09.152] [micropagosdatabase] [middleware] [info] [86e4a7f6d2f5] Request took 212.6252ms
+[2024-06-19 20:18:09.154] [micropagosdatabase] [middleware] [info] [4fd4d54fb94b] New petition received
+[2024-06-19 20:18:09.155] [micropagosdatabase] [middleware] [trace] [4fd4d54fb94b] url: /usersInfo/4fd4d54fb94b, method: GET
+[2024-06-19 20:18:09.155] [micropagosdatabase] [handler] [info] [4fd4d54fb94b] starting to get users info
+[2024-06-19 20:18:09.155] [micropagosdatabase] [database] [trace] [4fd4d54fb94b] starting to get the users information
+[2024-06-19 20:18:09.155] [micropagosdatabase] [database] [trace] [4fd4d54fb94b] this is the QUERY: SELECT u.id, u.username, u.password, u.lastlogin, d.name FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 20:18:09.423] [micropagosdatabase] [database] [info] [4fd4d54fb94b] the query in the database tooks: 267.8023ms
+[2024-06-19 20:18:09.424] [micropagosdatabase] [middleware] [info] [4fd4d54fb94b] Request took 269.8325ms
+[2024-06-19 20:20:08.943] [micropagosdatabase] [middleware] [info] [f169ef05c0cd] New petition received
+[2024-06-19 20:20:08.943] [micropagosdatabase] [middleware] [trace] [f169ef05c0cd] url: /masks/f169ef05c0cd, method: GET
+[2024-06-19 20:20:08.943] [micropagosdatabase] [handler] [info] [f169ef05c0cd] starting to get the maskpatterns
+[2024-06-19 20:20:08.943] [micropagosdatabase] [database] [trace] [f169ef05c0cd] starting to get the mask patters
+[2024-06-19 20:20:08.943] [micropagosdatabase] [database] [trace] [f169ef05c0cd] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 20:20:09.155] [micropagosdatabase] [database] [info] [f169ef05c0cd] the query in the database tooks: 211.4172ms
+[2024-06-19 20:20:09.155] [micropagosdatabase] [middleware] [info] [f169ef05c0cd] Request took 212.4577ms
+[2024-06-19 20:20:09.157] [micropagosdatabase] [middleware] [info] [f361a4195edb] New petition received
+[2024-06-19 20:20:09.157] [micropagosdatabase] [middleware] [trace] [f361a4195edb] url: /usersInfo/f361a4195edb, method: GET
+[2024-06-19 20:20:09.157] [micropagosdatabase] [handler] [info] [f361a4195edb] starting to get users info
+[2024-06-19 20:20:09.157] [micropagosdatabase] [database] [trace] [f361a4195edb] starting to get the users information
+[2024-06-19 20:20:09.157] [micropagosdatabase] [database] [trace] [f361a4195edb] this is the QUERY: SELECT u.id, u.username, u.password, u.lastlogin, d.name FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 20:20:09.418] [micropagosdatabase] [database] [info] [f361a4195edb] the query in the database tooks: 260.2133ms
+[2024-06-19 20:20:09.418] [micropagosdatabase] [middleware] [info] [f361a4195edb] Request took 260.7368ms
+[2024-06-19 20:22:08.935] [micropagosdatabase] [middleware] [info] [3140f1e5c868] New petition received
+[2024-06-19 20:22:08.935] [micropagosdatabase] [middleware] [trace] [3140f1e5c868] url: /masks/3140f1e5c868, method: GET
+[2024-06-19 20:22:08.936] [micropagosdatabase] [handler] [info] [3140f1e5c868] starting to get the maskpatterns
+[2024-06-19 20:22:08.936] [micropagosdatabase] [database] [trace] [3140f1e5c868] starting to get the mask patters
+[2024-06-19 20:22:08.936] [micropagosdatabase] [database] [trace] [3140f1e5c868] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 20:22:09.210] [micropagosdatabase] [database] [info] [3140f1e5c868] the query in the database tooks: 274.3048ms
+[2024-06-19 20:22:09.211] [micropagosdatabase] [middleware] [info] [3140f1e5c868] Request took 275.8354ms
+[2024-06-19 20:22:09.214] [micropagosdatabase] [middleware] [info] [6ba79ec15895] New petition received
+[2024-06-19 20:22:09.214] [micropagosdatabase] [middleware] [trace] [6ba79ec15895] url: /usersInfo/6ba79ec15895, method: GET
+[2024-06-19 20:22:09.214] [micropagosdatabase] [handler] [info] [6ba79ec15895] starting to get users info
+[2024-06-19 20:22:09.214] [micropagosdatabase] [database] [trace] [6ba79ec15895] starting to get the users information
+[2024-06-19 20:22:09.214] [micropagosdatabase] [database] [trace] [6ba79ec15895] this is the QUERY: SELECT u.id, u.username, u.password, u.lastlogin, d.name FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 20:22:09.475] [micropagosdatabase] [database] [info] [6ba79ec15895] the query in the database tooks: 261.342ms
+[2024-06-19 20:22:09.475] [micropagosdatabase] [middleware] [info] [6ba79ec15895] Request took 261.8666ms
+[2024-06-19 20:24:08.937] [micropagosdatabase] [middleware] [info] [55e111f8c85d] New petition received
+[2024-06-19 20:24:08.937] [micropagosdatabase] [middleware] [trace] [55e111f8c85d] url: /masks/55e111f8c85d, method: GET
+[2024-06-19 20:24:08.937] [micropagosdatabase] [handler] [info] [55e111f8c85d] starting to get the maskpatterns
+[2024-06-19 20:24:08.937] [micropagosdatabase] [database] [trace] [55e111f8c85d] starting to get the mask patters
+[2024-06-19 20:24:08.937] [micropagosdatabase] [database] [trace] [55e111f8c85d] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 20:24:09.148] [micropagosdatabase] [database] [info] [55e111f8c85d] the query in the database tooks: 211.1766ms
+[2024-06-19 20:24:09.149] [micropagosdatabase] [middleware] [info] [55e111f8c85d] Request took 212.2811ms
+[2024-06-19 20:24:09.152] [micropagosdatabase] [middleware] [info] [e719ab1bcf21] New petition received
+[2024-06-19 20:24:09.152] [micropagosdatabase] [middleware] [trace] [e719ab1bcf21] url: /usersInfo/e719ab1bcf21, method: GET
+[2024-06-19 20:24:09.152] [micropagosdatabase] [handler] [info] [e719ab1bcf21] starting to get users info
+[2024-06-19 20:24:09.152] [micropagosdatabase] [database] [trace] [e719ab1bcf21] starting to get the users information
+[2024-06-19 20:24:09.152] [micropagosdatabase] [database] [trace] [e719ab1bcf21] this is the QUERY: SELECT u.id, u.username, u.password, u.lastlogin, d.name FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 20:24:09.419] [micropagosdatabase] [database] [info] [e719ab1bcf21] the query in the database tooks: 267.3683ms
+[2024-06-19 20:24:09.421] [micropagosdatabase] [middleware] [info] [e719ab1bcf21] Request took 269.3693ms
+[2024-06-19 20:26:08.938] [micropagosdatabase] [middleware] [info] [1a86e59429f4] New petition received
+[2024-06-19 20:26:08.939] [micropagosdatabase] [middleware] [trace] [1a86e59429f4] url: /masks/1a86e59429f4, method: GET
+[2024-06-19 20:26:08.939] [micropagosdatabase] [handler] [info] [1a86e59429f4] starting to get the maskpatterns
+[2024-06-19 20:26:08.939] [micropagosdatabase] [database] [trace] [1a86e59429f4] starting to get the mask patters
+[2024-06-19 20:26:08.939] [micropagosdatabase] [database] [trace] [1a86e59429f4] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 20:26:09.156] [micropagosdatabase] [database] [info] [1a86e59429f4] the query in the database tooks: 217.9552ms
+[2024-06-19 20:26:09.156] [micropagosdatabase] [middleware] [info] [1a86e59429f4] Request took 218.479ms
+[2024-06-19 20:26:09.160] [micropagosdatabase] [middleware] [info] [d5d1a03dbd02] New petition received
+[2024-06-19 20:26:09.161] [micropagosdatabase] [middleware] [trace] [d5d1a03dbd02] url: /usersInfo/d5d1a03dbd02, method: GET
+[2024-06-19 20:26:09.161] [micropagosdatabase] [handler] [info] [d5d1a03dbd02] starting to get users info
+[2024-06-19 20:26:09.161] [micropagosdatabase] [database] [trace] [d5d1a03dbd02] starting to get the users information
+[2024-06-19 20:26:09.161] [micropagosdatabase] [database] [trace] [d5d1a03dbd02] this is the QUERY: SELECT u.id, u.username, u.password, u.lastlogin, d.name FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 20:26:09.440] [micropagosdatabase] [database] [info] [d5d1a03dbd02] the query in the database tooks: 278.7159ms
+[2024-06-19 20:26:09.440] [micropagosdatabase] [middleware] [info] [d5d1a03dbd02] Request took 279.7372ms
+[2024-06-19 20:28:08.943] [micropagosdatabase] [middleware] [info] [aa16607af95a] New petition received
+[2024-06-19 20:28:08.944] [micropagosdatabase] [middleware] [trace] [aa16607af95a] url: /masks/aa16607af95a, method: GET
+[2024-06-19 20:28:08.944] [micropagosdatabase] [handler] [info] [aa16607af95a] starting to get the maskpatterns
+[2024-06-19 20:28:08.944] [micropagosdatabase] [database] [trace] [aa16607af95a] starting to get the mask patters
+[2024-06-19 20:28:08.944] [micropagosdatabase] [database] [trace] [aa16607af95a] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 20:28:09.162] [micropagosdatabase] [database] [info] [aa16607af95a] the query in the database tooks: 218.5627ms
+[2024-06-19 20:28:09.163] [micropagosdatabase] [middleware] [info] [aa16607af95a] Request took 219.3053ms
+[2024-06-19 20:28:09.166] [micropagosdatabase] [middleware] [info] [1342f52b1794] New petition received
+[2024-06-19 20:28:09.166] [micropagosdatabase] [middleware] [trace] [1342f52b1794] url: /usersInfo/1342f52b1794, method: GET
+[2024-06-19 20:28:09.166] [micropagosdatabase] [handler] [info] [1342f52b1794] starting to get users info
+[2024-06-19 20:28:09.166] [micropagosdatabase] [database] [trace] [1342f52b1794] starting to get the users information
+[2024-06-19 20:28:09.166] [micropagosdatabase] [database] [trace] [1342f52b1794] this is the QUERY: SELECT u.id, u.username, u.password, u.lastlogin, d.name FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 20:28:09.384] [micropagosdatabase] [database] [info] [1342f52b1794] the query in the database tooks: 217.583ms
+[2024-06-19 20:28:09.385] [micropagosdatabase] [middleware] [info] [1342f52b1794] Request took 218.8893ms
+[2024-06-19 20:30:08.937] [micropagosdatabase] [middleware] [info] [1c1de9ceb95e] New petition received
+[2024-06-19 20:30:08.937] [micropagosdatabase] [middleware] [trace] [1c1de9ceb95e] url: /masks/1c1de9ceb95e, method: GET
+[2024-06-19 20:30:08.937] [micropagosdatabase] [handler] [info] [1c1de9ceb95e] starting to get the maskpatterns
+[2024-06-19 20:30:08.938] [micropagosdatabase] [database] [trace] [1c1de9ceb95e] starting to get the mask patters
+[2024-06-19 20:30:08.938] [micropagosdatabase] [database] [trace] [1c1de9ceb95e] this is the QUERY: SELECT ID, SHORTNUMBER, MASKPATTERN, MINLENGTH, MAXLENGTH, EXCLUDEPATTERN, DIRECTION, APPLICATION_ID FROM MASK; 
+[2024-06-19 20:30:09.142] [micropagosdatabase] [database] [info] [1c1de9ceb95e] the query in the database tooks: 204.1311ms
+[2024-06-19 20:30:09.142] [micropagosdatabase] [middleware] [info] [1c1de9ceb95e] Request took 205.1848ms
+[2024-06-19 20:30:09.146] [micropagosdatabase] [middleware] [info] [11ce56535b4e] New petition received
+[2024-06-19 20:30:09.146] [micropagosdatabase] [middleware] [trace] [11ce56535b4e] url: /usersInfo/11ce56535b4e, method: GET
+[2024-06-19 20:30:09.146] [micropagosdatabase] [handler] [info] [11ce56535b4e] starting to get users info
+[2024-06-19 20:30:09.146] [micropagosdatabase] [database] [trace] [11ce56535b4e] starting to get the users information
+[2024-06-19 20:30:09.146] [micropagosdatabase] [database] [trace] [11ce56535b4e] this is the QUERY: SELECT u.id, u.username, u.password, u.lastlogin, d.name FROM user u JOIN domain d ON d.id = u.domain_id JOIN user_role AS ur ON ur.user_id = u.id JOIN role AS r ON r.id = ur.role_id WHERE r.name = 'webservice' AND r.system = 'raven'
+[2024-06-19 20:30:09.416] [micropagosdatabase] [database] [info] [11ce56535b4e] the query in the database tooks: 269.7922ms
+[2024-06-19 20:30:09.416] [micropagosdatabase] [middleware] [info] [11ce56535b4e] Request took 270.8508ms

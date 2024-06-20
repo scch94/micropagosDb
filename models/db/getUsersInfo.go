@@ -21,7 +21,7 @@ type UserInfo struct {
 func (user *UserInfoDb) ConvertUser() UserInfo {
 	return UserInfo{
 		UserId:        user.UserId.String,
-		Username:      user.UserId.String,
+		Username:      user.Username.String,
 		UserPassword:  user.UserPassword.String,
 		UserLastLogin: user.UserLastLogin.String,
 		DomainName:    user.DomainName.String,
